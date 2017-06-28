@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
 	root "static#index"
-	resources :game, only: [:new, :create]
+	resources :games, only: [:new, :create]
 
 end
