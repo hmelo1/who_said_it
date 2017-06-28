@@ -1,0 +1,19 @@
+@import 'base/variables';
+
+.title {
+  font-size: 2.5em;
+  padding-top: 150px;
+  text-align: center;
+  text-shadow: 2px 2px $tertiary-font-color;
+}
+
+a {
+  color: $base-font-color;
+  font-size: 1em;
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+  
+}
