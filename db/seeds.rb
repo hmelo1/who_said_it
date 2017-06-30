@@ -38,4 +38,4 @@ json_import("stewie", "Stewie Griffin", "Baby, Deranged Matricidal Maniac", "ste
 json_import("the_brain", "The Brain", "Lab Mouse Obsessed with World Domination", "the_brain.jpg")
 
 # Ursula
-json_import("ursula", "Ursula", "Villainous Sea Witch", "ursula.jpg")
+json_import("ursula", "Ursula", "Villainous Sea Witch, Compulsive Muffin Eater", "ursula.jpg")
