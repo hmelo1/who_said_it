@@ -17,10 +17,11 @@
 @import 'base/variables';
 
 body {
-  background-image: $background-gradient;
+  background: $background-gradient;
+  color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  color: $base-font-color;
+  height: 100vh;
 }
 
 h1,
