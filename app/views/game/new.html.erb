@@ -5,33 +5,14 @@
     </div>
   </div>
   <div class="row">
-    <div class="four columns">
-      <div class="card">
-        <%=image_tag("characters/trump1.jpg", :style => "width: 100%;") %>
-        <div class="card_container">
-          <h4><%= @trump.name %></h4> 
-          <p><%= @trump.title %></p> 
-        </div>
-      </div>
-    </div>
-    <div class="four columns">
-      <div class="card">
-        <%=image_tag("characters/george_w_bush1.jpg", :style => "width: 100%;") %>
-        <div class="card_container">
-          <h4><%= @bush.name %></h4> 
-          <p><%= @bush.title %></p> 
-        </div>
-      </div>
-    </div>
-    <div class="four columns">
-      <div class="card">
-        <%=image_tag("characters/hitler1.jpg", :style => "width: 100%;") %>
-        <div class="card_container">
-          <h4><%= @hitler.name %></h4> 
-          <p><%= @hitler.title %></p> 
-        </div>
-      </div>
-    </div>
+    <%= render partial: "card", locals: { object: @donald_trump } %>
+    <%= render partial: "card", locals: { object: @george_w_bush } %>
+    <%= render partial: "card", locals: { object: @hitler } %>
+  </div>
+  <div class="row">
+    <%= render partial: "card", locals: { object: @donald_trump } %>
+    <%= render partial: "card", locals: { object: @george_w_bush } %>
+    <%= render partial: "card", locals: { object: @hitler } %>
   </div>
   <button type="submit" class="button-primary">Play the Game</button>
 </form>

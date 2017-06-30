@@ -14,28 +14,28 @@ def json_import(filename, name, title, img)
 end
 
 # Donald Trump
-json_import("donald_trump", "Donald Trump", "45th U.S. President, Vocal Misogynist", "donald_trump.png")
+json_import("donald_trump", "Donald Trump", "45th U.S. President, Vocal Misogynist", "donald_trump.jpg")
 
 # George W. Bush
-json_import("george_w_bush", "George W. Bush", "43rd U.S. President, Dodger of Shoes", "george_w_bush.png")
+json_import("george_w_bush", "George W. Bush", "43rd U.S. President, Dodger of Shoes", "george_w_bush.jpg")
 
 # Hitler
-json_import("hitler", "Adolf Hitler", "Leader of the Nazi Party, Mass-Murderer", "hitler.png")
+json_import("hitler", "Adolf Hitler", "Leader of the Nazi Party, Mass-Murderer", "hitler.jpg")
 
 # Mr. Krabs
-json_import("mr_krabs", "Eugene Krabs", "Owner of the Krusty Krab, Avid Capitalist", "mr_krabs.png")
+json_import("mr_krabs", "Eugene Krabs", "Owner of the Krusty Krab, Avid Capitalist", "mr_krabs.jpg")
 
 # Skeletor
-json_import("skeletor", "Skeletor", "Aspiring Master of the Universe, Archenemy of He-Man", "skeletor.png")
+json_import("skeletor", "Skeletor", "Aspiring Master of the Universe, Archenemy of He-Man", "skeletor.jpg")
 
 # Stalin
-json_import("joseph_stalin", "Joseph Stalin", "Soviet Revolutionary, Red Terror Extraordinaire", "stalin.png")
+json_import("joseph_stalin", "Joseph Stalin", "Soviet Revolutionary, Red Terror Extraordinaire", "stalin.jpg")
 
 # Stewie
-json_import("stewie", "Stewie Griffin", "Baby, Deranged Matricidal Maniac", "stewie.png")
+json_import("stewie", "Stewie Griffin", "Baby, Deranged Matricidal Maniac", "stewie.jpg")
 
 # The Brain
-json_import("the_brain", "The Brain", "Lab Mouse Obsessed with World Domination", "the_brain.png")
+json_import("the_brain", "The Brain", "Lab Mouse Obsessed with World Domination", "the_brain.jpg")
 
 # Ursula
-json_import("ursula", "Ursula", "Villainous Sea Witch", "ursula.png")
+json_import("ursula", "Ursula", "Villainous Sea Witch", "ursula.jpg")
