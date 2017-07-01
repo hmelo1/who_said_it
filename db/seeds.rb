@@ -1,4 +1,4 @@
-def json_import(filename, name, title, img)
+def character_import(filename, name, title, img)
 	character = Character.create(
 		name: name,
 		title: title,
@@ -14,28 +14,31 @@ def json_import(filename, name, title, img)
 end
 
 # Donald Trump
-json_import("donald_trump", "Donald Trump", "45th U.S. President, Active Misogynist", "donald_trump.jpg")
+character_import("donald_trump", "Donald Trump", "45th U.S. President, Active Misogynist", "donald_trump.jpg")
+
+# Eugene Krabs
+character_import("mr_krabs", "Eugene Krabs", "Owner of the Krusty Krab, Avid Capitalist", "mr_krabs.jpg")
 
 # George W. Bush
-json_import("george_w_bush", "George W. Bush", "43rd U.S. President, Dodger of Shoes", "george_w_bush.jpg")
+character_import("george_w_bush", "George W. Bush", "43rd U.S. President, Dodger of Shoes", "george_w_bush.jpg")
 
 # Hitler
-json_import("hitler", "Adolf Hitler", "Leader of the Nazi Party, Mass-Murderer", "hitler.jpg")
+character_import("hitler", "Adolf Hitler", "Leader of the Nazi Party, Mass-Murderer", "hitler.jpg")
 
-# Mr. Krabs
-json_import("mr_krabs", "Eugene Krabs", "Owner of the Krusty Krab, Avid Capitalist", "mr_krabs.jpg")
+# Montgomery Burns
+character_import("mr_burns", "Montgomery Burns", "Evil Owner of the Springfield Nuclear Power Plant", "mr_burns.jpg")
 
 # Skeletor
-json_import("skeletor", "Skeletor", "Aspiring Master of the Universe", "skeletor.jpg")
+character_import("skeletor", "Skeletor", "Aspiring Master of the Universe", "skeletor.jpg")
 
 # Stalin
-json_import("joseph_stalin", "Joseph Stalin", "Soviet Leader, Red Terror Extraordinaire", "stalin.jpg")
+character_import("joseph_stalin", "Joseph Stalin", "Soviet Leader, Red Terror Extraordinaire", "stalin.jpg")
 
 # Stewie
-json_import("stewie", "Stewie Griffin", "Baby, Deranged Matricidal Maniac", "stewie.jpg")
+character_import("stewie", "Stewie Griffin", "Baby, Deranged Matricidal Maniac", "stewie.jpg")
 
 # The Brain
-json_import("the_brain", "The Brain", "Lab Mouse Obsessed with World Domination", "the_brain.jpg")
+character_import("the_brain", "The Brain", "Lab Mouse Obsessed with World Domination", "the_brain.jpg")
 
 # Ursula
-json_import("ursula", "Ursula", "Villainous Sea Witch, Compulsive Eater", "ursula.jpg")
+character_import("ursula", "Ursula", "Villainous Sea Witch, Compulsive Eater", "ursula.jpg")
