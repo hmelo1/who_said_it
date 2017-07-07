@@ -13,6 +13,10 @@ def character_import(filename, name, title, img)
 	end
 end
 
+
+# Bill Hicks
+character_import("bill_hicks", "Bill Hicks", "Chain Smoker, Raging Misanthropist", "bill_hicks.jpg")
+
 # Donald Trump
 character_import("donald_trump", "Donald Trump", "45th U.S. President, Active Misogynist", "donald_trump.jpg")
 
@@ -21,6 +25,9 @@ character_import("mr_krabs", "Eugene Krabs", "Owner of the Krusty Krab, Avid Cap
 
 # George W. Bush
 character_import("george_w_bush", "George W. Bush", "43rd U.S. President, Dodger of Shoes", "george_w_bush.jpg")
+
+# George Carlin
+character_import("george_carlin", "George Carlin", "Stand-up Comedian, Renowned Cynic", "george_carlin.jpg")
 
 # Hitler
 character_import("hitler", "Adolf Hitler", "Leader of the Nazi Party, Mass-Murderer", "hitler.jpg")
@@ -36,9 +43,3 @@ character_import("joseph_stalin", "Joseph Stalin", "Soviet Leader, Red Terror Ex
 
 # Stewie
 character_import("stewie", "Stewie Griffin", "Baby, Deranged Matricidal Maniac", "stewie.jpg")
-
-# The Brain
-character_import("the_brain", "The Brain", "Lab Mouse Obsessed with World Domination", "the_brain.jpg")
-
-# Ursula
-character_import("ursula", "Ursula", "Villainous Sea Witch, Compulsive Eater", "ursula.jpg")

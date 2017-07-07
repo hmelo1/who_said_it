@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 		@skeletor = Character.find_by(name: "Skeletor")
 		@stewie = Character.find_by(name: "Stewie Griffin")
 		@joseph_stalin = Character.find_by(name: "Joseph Stalin")
-		@the_brain = Character.find_by(name: "The Brain")
-		@ursula = Character.find_by(name: "Ursula")
+		@bill_hicks = Character.find_by(name: "Bill Hicks")
+		@george_carlin = Character.find_by(name: "George Carlin")
 	end
 end
