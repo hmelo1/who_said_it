@@ -3,3 +3,29 @@
 	<h4 id="subtitle">The Game of Deciding Who Said What</h3>
 	<button id="play-game">Play Game</button>
 </div>
+
+<div id="character-select" class="hide">
+	<form id="option" action="/whatever" method="post">
+	  <div class="row">
+	    <div class="six columns">
+	      <h1>Character Selection</h1>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <%= render partial: "card", locals: { object: @donald_trump } %>
+	    <%= render partial: "card", locals: { object: @george_w_bush } %>
+	    <%= render partial: "card", locals: { object: @hitler } %>
+	  </div>
+	  <div class="row">
+	    <%= render partial: "card", locals: { object: @skeletor } %>
+	    <%= render partial: "card", locals: { object: @stewie } %>
+	    <%= render partial: "card", locals: { object: @the_brain } %>
+	  </div>
+	  <div class="row">
+	    <%= render partial: "card", locals: { object: @joseph_stalin } %>
+	    <%= render partial: "card", locals: { object: @ursula } %>
+	    <%= render partial: "card", locals: { object: @mr_krabs } %>
+	  </div>
+	  <button type="submit" class="button-primary">Play!</button>
+	</form>
+</div>
