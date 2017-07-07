@@ -121,7 +121,7 @@
 
 // Subtitle
 
-@keyframes subtitle {
+@keyframes fadeup {
   0% {
     opacity: 0;
     transform: translate(0px, 20px);
@@ -135,5 +135,13 @@
 #subtitle {
   text-align: center;
   opacity: 0;
-  animation: subtitle 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.5s;
+  animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.5s;
 }
+
+// Button
+
+#play-game {
+  opacity: 0;
+  animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.8s;
+}
+
