@@ -12,10 +12,17 @@ $(function() {
 	})
 
 	// Character Selection
-	var $card = $('.card');
+	$('.card').click(function() {
+		var $active = $('.active')
+		
+		if ($active.length < 2) {
+			$(this).toggleClass('active');
+		} else {
+			$(this).removeClass('active');
+		}
 
-	$card.click(function() {
-		$(this).toggleClass('active');
 	})
+
+
 
 });

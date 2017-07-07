@@ -1,5 +1,8 @@
 #character-select {
-	.name {
+	h1.cs-title {
+		text-align: center;
+	}
+	.name, {
 		font-size: 3rem;
 	}
 }
