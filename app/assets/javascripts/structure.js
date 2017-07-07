@@ -1,6 +1,6 @@
 $(function() {
-	$welcome_div = $('#welcome')
-	$character_select_div = $('#character-select')
+	$welcome_div = $('#welcome');
+	$character_select_div = $('#character-select');
 
 	// Hide Character Selection
 	// $character_select_div.hide().removeClass('hide');
@@ -12,8 +12,10 @@ $(function() {
 	})
 
 	// Character Selection
-	$('.card').click(function() {
-		alert('hello')
+	var $card = $('.card');
+
+	$card.click(function() {
+		$(this).toggleClass('active');
 	})
 
 });

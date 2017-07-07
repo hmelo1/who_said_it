@@ -12,10 +12,6 @@
   }
 }
 
-.active {
-  border: 9px white solid;
-}
-
 /* Add some padding inside the card container */
 .card-container {
   padding: 2px 16px;
@@ -26,4 +22,8 @@
 img {
   border-radius: 10px 10px 0 0;
   width: 100%;
+}
+
+.active {
+  border: 9px white solid;
 }

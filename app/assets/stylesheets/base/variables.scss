@@ -1,17 +1,22 @@
-// Typography
-$primary-font-family: 'Raleway', sans-serif;
-$secondary-font-family: 'Shanti', sans-serif;
+// Background Gradient
+$gradient-one: #874da2;
+$gradient-two: #c43a30;
+$background-gradient: linear-gradient(45deg, $gradient-one 0%, $gradient-two 100%);
 
-// Font Sizes
-$base-font-size: 16px;
+// Color Scheme (Purple, Light Purple, Lighter Purple)
+$primary-color: #a5446a;
+$secondary-color: #b36b92;
+$tertiary-color: #bf749d;
+
+// Font Size
+$base-font-size: 12px;
 
 // Font Color
 $primary-font-color: #fff;
 $secondary-font-color: #5987b6;
 $tertiary-font-color: #fd874b;
 
-// Background Gradient
-$gradient-one: #874da2;
-$gradient-two: #c43a30;
-$background-gradient: linear-gradient(45deg, $gradient-one 0%, $gradient-two 100%);
 
+// Typography
+$primary-font-family: 'Raleway', sans-serif;
+$secondary-font-family: 'Shanti', sans-serif;
