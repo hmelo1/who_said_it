@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 	def index
+		@characters = Character.all
 		@donald_trump = Character.find_by(name: "Donald Trump")
 		@george_w_bush = Character.find_by(name: "George W. Bush")
 		@hitler = Character.find_by(name: "Adolf Hitler")

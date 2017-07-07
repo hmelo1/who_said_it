@@ -20,7 +20,6 @@ $(function() {
 		} else {
 			$(this).removeClass('active');
 		}
-
 	})
 
 
