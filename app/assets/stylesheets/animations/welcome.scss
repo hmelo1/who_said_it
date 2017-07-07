@@ -1,0 +1,146 @@
+// Title
+@keyframes whosaidit {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+#clip_w1 {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:24;
+  animation: whosaidit .8s linear forwards;
+}
+
+#clip_w2 {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:17;
+  animation: whosaidit .8s linear forwards .35s;
+}
+
+#clip_ho1 {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:13;
+  animation: whosaidit .8s linear forwards .6s;
+}
+
+#clip_ho2 {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:15;
+  animation: whosaidit .8s linear forwards .9s;
+}
+
+#clip_s {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:18;
+  animation: whosaidit .8s linear forwards 1.2s;
+}
+
+#clip_aid1 {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:15;
+  animation: whosaidit .8s linear forwards 1.5s;
+}
+
+#clip_aid2 {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:15;
+  animation: whosaidit .8s linear forwards 1.6s;
+}
+
+#clip_aid3 {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:19;
+  animation: whosaidit .8s linear forwards 1.8s;
+}
+
+#clip_aid4 {
+	stroke: #fff;
+	stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:16;
+  animation: whosaidit .8s linear forwards 1.9s;
+}
+
+#clip_dot {
+	stroke: #fff;
+	stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+  stroke-width:16;
+  animation: whosaidit 1s linear forwards 2.2s;
+}
+
+#clip_i {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:15;
+  animation: whosaidit .8s linear forwards 2.4s;
+}
+
+#clip_t {
+	stroke: #fff;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  stroke-width:24;
+  animation: whosaidit 1s linear forwards 2.7s;
+}
+
+@keyframes question {
+  0% {
+		transform-origin: 75% 50%;
+    -moz-transform-origin: 75% 50%;
+    transform: scale(0.0);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+#question {
+	fill: #fff;
+	transform: scale(0.0);
+	animation: question .5s ease-out forwards 3.0s;
+}
+
+// Subtitle
+
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+#subtitle {
+  text-align: center;
+  opacity: 0;
+  animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.5s;
+}
+
+// Button
+
+#play-game {
+  opacity: 0;
+  animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.8s;
+}
+

@@ -103,7 +103,9 @@
 
 @keyframes question {
   0% {
-		transform-origin: 50% 50%;
+  	transform-origin: 75% 50%;
+    -webkit-transform-origin: 75% 50%;
+    -moz-transform-origin: 75% 50%;
     transform: scale(0.0);
   }
   100% {
