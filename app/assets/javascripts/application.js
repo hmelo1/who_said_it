@@ -14,6 +14,6 @@
 //= require turbolinks
 //= require jquery3
 //= require jquery_ujs
-//= require TweenLite.min
-//= require EasePack.min.js
+//= require TweenMax.min
+//= require EasePack.min
 //= require_tree .
