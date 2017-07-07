@@ -18,7 +18,7 @@
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   stroke-width:17;
-  animation: whosaidit .8s linear forwards .4s;
+  animation: whosaidit .8s linear forwards .35s;
 }
 
 #clip_ho1 {
@@ -82,7 +82,7 @@
 	stroke-dasharray: 300;
   stroke-dashoffset: 300;
   stroke-width:16;
-  animation: whosaidit 1s linear forwards 2.1s;
+  animation: whosaidit 1s linear forwards 2.2s;
 }
 
 #clip_i {
@@ -90,7 +90,7 @@
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   stroke-width:15;
-  animation: whosaidit .8s linear forwards 2.5s;
+  animation: whosaidit .8s linear forwards 2.4s;
 }
 
 #clip_t {
@@ -98,7 +98,7 @@
   stroke-dasharray: 500;
   stroke-dashoffset: 500;
   stroke-width:24;
-  animation: whosaidit 1s linear forwards 2.9s;
+  animation: whosaidit 1s linear forwards 2.7s;
 }
 
 @keyframes question {
@@ -116,5 +116,24 @@
 #question {
 	fill: #fff;
 	transform: scale(0.0);
-	animation: question .5s ease-out forwards 3.2s;
+	animation: question .5s ease-out forwards 3.0s;
+}
+
+// Subtitle
+
+@keyframes subtitle {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+#subtitle {
+  text-align: center;
+  opacity: 0;
+  animation: subtitle 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.5s;
 }
