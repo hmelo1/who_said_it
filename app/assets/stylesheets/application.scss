@@ -18,10 +18,10 @@
 
 body {
   background: $background-gradient;
-  color: $base-font-color;
-  font-family: $base-font-family;
+  background-attachment: fixed;
+  color: $primary-font-color;
+  font-family: $primary-font-family;
   font-size: $base-font-size;
-  height: 100vh;
 }
 
 h1,
@@ -30,5 +30,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $heading-font-family;
+  font-family: $secondary-font-family;
 }

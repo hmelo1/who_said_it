@@ -14,13 +14,13 @@ Quote Categories:
 
  	Model Associations:
 	 
-	1. Game(num_of_questions: integer, score_to_win(max 30):integer)
-		-Has Many character(2 characters Per Game)
+	1. Game(num_of_questions: integer, score_to_win(default: 10):integer)
+		-Has Many characters(2 characters Per Game)
 		-Has Many Quotes through characters
 
 	2. Characters(name:string, title:string)
 		-Has Many Quotes
-		-Belongs to Game (i.e. A game has two characters)
+		-Has many games
 
 	3. Quotes(content:string, source:string, tag:string)
 		-Belongs to character

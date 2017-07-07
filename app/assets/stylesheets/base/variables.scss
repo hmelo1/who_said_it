@@ -1,14 +1,17 @@
 // Typography
-$base-font-family: 'Open Sans', sans-serif;
-$heading-font-family: 'Pacifico', cursive;
+$primary-font-family: 'Lato', sans-serif;
+$secondary-font-family: 'Source Sans Pro', sans-serif;
 
 // Font Sizes
-$base-font-size: 46px;
-$base-font-color: #fff;
+$base-font-size: 16px;
+
+// Font Color
+$primary-font-color: #fff;
 $secondary-font-color: #5987b6;
 $tertiary-font-color: #fd874b;
 
 // Background Colors
-$gradient-left: #a73737;
-$gradient-right: #7a2828;
-$background-gradient: linear-gradient(to right, $gradient-left 0%, $gradient-right 100%);
+$gradient-one: #874da2;
+$gradient-two: #c43a30;
+$background-gradient: linear-gradient(45deg, $gradient-one 0%, $gradient-two 100%);
+
