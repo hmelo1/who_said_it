@@ -11,8 +11,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require normalize
- *= require skeleton
- *= require_self
  */
 
 @import 'animations/module';
@@ -20,8 +18,8 @@
 @import 'layout/module';
 @import 'pages/module';
 
-.hide {
-  display: none;
-}
+// .hide {
+//   display: none;
+// }
 
 
