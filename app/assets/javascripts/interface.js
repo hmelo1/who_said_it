@@ -27,11 +27,37 @@ $(function() {
 		event.preventDefault();
 
 		if ($('.selected').length < 2) {
-			alert('Please select 2 characters')
+			alert('Please select 2 characters');
 		} else {
-			var selectedCharacters = $('.selected :input').serializeArray()
+			var AUTH_TOKEN = $("input[name='authenticity_token']").val();
+			var selectedCharacters = $('.selected :input').serializeArray();
+			var url = this.action + "?&authenticity_token=" + AUTH_TOKEN
 
-
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: selectedCharacters,
+				success: function() {
+					debugger
+				}
+			});
+			// $.ajax({
+	    //   url: 'https://formspree.io/hello@steveafrost.com',
+	    //   method: 'POST',
+	    //   data: contactForm.serialize(),
+	    //   dataType: 'json',
+	    //   beforeSend: function() {
+	    //     submitButton.attr('disabled', true).val('Sending message…');
+	    //   },
+	    //   success: function() {
+	    //     $('#contact').html("<br><br><center><h3>We'll be in touch shortly!</h3></center>");
+	    //     submitButton.prop('disabled', false).val(submitText);
+	    //   },
+	    //   error: function() {
+	    //     alert('Dang, something went wrong! Please try again.');
+	    //     submitButton.prop('disabled', false).val(submitText);
+	    //   },
+	    // });
 		}
 	})
 
