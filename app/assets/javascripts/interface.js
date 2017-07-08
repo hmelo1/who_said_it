@@ -4,24 +4,36 @@ $(function() {
 
 	// Hide Character Selection
 	// $character_select_div.hide().removeClass('hide');
-    
-  // Play Game (Click to Start Game) -- Section #1  
+
+  // Play Game (Click to Start Game) -- Section #1
 	$('#play-game').click(function() {
 		$welcome_div.fadeOut();
 		$character_select_div.delay(400).fadeIn(300);
 	})
 
 	// Character Selection
+
+	// Create a 'Selected/Active State for Clicked Cards'
 	$('.card').click(function() {
-		var $selected = $('.selected')
-		
-		if ($selected.length < 2) {
+		if ($('.selected').length < 2) {
 			$(this).toggleClass('selected');
 		} else {
 			$(this).removeClass('selected');
 		}
 	})
 
+	// AJAX Post to create new game
+	$('#create-game').submit(function(event) {
+		event.preventDefault();
+
+		if ($('.selected').length < 2) {
+			alert('Please select 2 characters')
+		} else {
+			var selectedCharacters = $('.selected :input').serializeArray()
+
+
+		}
+	})
 
 
 });
