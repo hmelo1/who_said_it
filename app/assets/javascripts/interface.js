@@ -41,23 +41,6 @@ $(function() {
 					debugger
 				}
 			});
-			// $.ajax({
-	    //   url: 'https://formspree.io/hello@steveafrost.com',
-	    //   method: 'POST',
-	    //   data: contactForm.serialize(),
-	    //   dataType: 'json',
-	    //   beforeSend: function() {
-	    //     submitButton.attr('disabled', true).val('Sending message…');
-	    //   },
-	    //   success: function() {
-	    //     $('#contact').html("<br><br><center><h3>We'll be in touch shortly!</h3></center>");
-	    //     submitButton.prop('disabled', false).val(submitText);
-	    //   },
-	    //   error: function() {
-	    //     alert('Dang, something went wrong! Please try again.');
-	    //     submitButton.prop('disabled', false).val(submitText);
-	    //   },
-	    // });
 		}
 	})
 
