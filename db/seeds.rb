@@ -33,8 +33,8 @@ character_import("george_carlin", "George Carlin", "Stand-up Comedian",  "Renown
 # Hitler
 character_import("hitler", "Adolf Hitler", "Leader of the Nazi Party", "Mass-Murderer", "hitler.jpg")
 
-# Montgomery Burns
-character_import("mr_burns", "Montgomery Burns", "Nuclear Power Plant Owner", "Trap Door Activator", "mr_burns.jpg")
+# Mr. Burns
+character_import("mr_burns", "Mr. Burns", "Nuclear Power Plant Owner", "Trap Door Activator", "mr_burns.jpg")
 
 # Skeletor
 character_import("skeletor", "Skeletor", "Muscular Blue Humanoid", "Aspiring Master of the Universe", "skeletor.jpg")
