@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 	root "home#index"
-	resources :game, only: [:new, :create]
-
+	post '/games/create', to: 'games#create', as: 'create_game'
+	post '/games/save', to: 'games#save', as: 'save_game'
+	resources :characters, only: [:index, :show]
+	resources :quotes, only: [:index, :show]
+	
 end

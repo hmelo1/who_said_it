@@ -21,8 +21,8 @@ character_import("bill_hicks", "Bill Hicks", "Chain Smoker", "Raging Misanthropi
 # Donald Trump
 character_import("donald_trump", "Donald Trump", "45th U.S. President", "Unrepentant Misogynist", "donald_trump.jpg")
 
-# Eugene Krabs
-character_import("mr_krabs", "Eugene Krabs", "Owner of the Krusty Krab", "Avid Capitalist", "mr_krabs.jpg")
+# Mr. Krabs
+character_import("mr_krabs", "Mr. Krabs", "Owner of the Krusty Krab", "Avid Capitalist", "mr_krabs.jpg")
 
 # George W. Bush
 character_import("george_w_bush", "George W. Bush", "43rd U.S. President", "Dodger of Shoes", "george_w_bush.jpg")
@@ -30,11 +30,17 @@ character_import("george_w_bush", "George W. Bush", "43rd U.S. President", "Dodg
 # George Carlin
 character_import("george_carlin", "George Carlin", "Stand-up Comedian",  "Renowned Cynic", "george_carlin.jpg")
 
+# God
+character_import("god", "God", "Alpha and Omega",  "Expert Sculptor", "god.jpg")
+
 # Hitler
 character_import("hitler", "Adolf Hitler", "Leader of the Nazi Party", "Mass-Murderer", "hitler.jpg")
 
-# Mr. Burns
+# King Joffrey
 character_import("mr_burns", "Mr. Burns", "Nuclear Power Plant Owner", "Trap Door Activator", "mr_burns.jpg")
+
+# Mr. Burns
+character_import("king_joffrey", "King Joffrey", " Heir to King Baratheon", "Egomaniacal Snowflake	", "king_joffrey.jpg")
 
 # Skeletor
 character_import("skeletor", "Skeletor", "Muscular Blue Humanoid", "Aspiring Master of the Universe", "skeletor.jpg")

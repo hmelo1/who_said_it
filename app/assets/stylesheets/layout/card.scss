@@ -8,7 +8,8 @@
   &:hover {
     /* On mouse-over, add a deeper shadow */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    transform: scale(1.05)
+    transform: scale(1.05);
+    cursor: pointer;
   }
 }
 
@@ -24,6 +25,6 @@ img {
 }
 
 .active {
-  border: 10px white solid;
-  transform: scale(1.05)
+  border: 10px #fff solid;
+  transform: scale(1.05);
 }

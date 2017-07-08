@@ -22,8 +22,7 @@ ActiveRecord::Schema.define(version: 20170626213113) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.integer "num_of_questions"
-    t.integer "game_timer"
+    t.text "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
