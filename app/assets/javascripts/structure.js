@@ -13,12 +13,12 @@ $(function() {
 
 	// Character Selection
 	$('.card').click(function() {
-		var $active = $('.active')
+		var $selected = $('.selected')
 		
-		if ($active.length < 2) {
-			$(this).toggleClass('active');
+		if ($selected.length < 2) {
+			$(this).toggleClass('selected');
 		} else {
-			$(this).removeClass('active');
+			$(this).removeClass('selected');
 		}
 	})
 

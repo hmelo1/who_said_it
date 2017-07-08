@@ -5,7 +5,7 @@
 </div>
 
 <div id="character-select" class="hide">
-	<form id="option" action="/games/create" method="post">
+	<%= form_tag(create_game_path, method: 'post', id: 'create-game') do %>
 	  <div class="row">
 	     <h1 class="cs-title">Character Selection</h1>
 	  </div>
@@ -16,7 +16,7 @@
 		    <% end %>
 		  </div>
 		<% end %>
-	  <button type="submit">Play!</button>
-	</form>
+	  <button id="start-game" type="submit">Start Game!</button>
+	<% end %>
 </div>
 
