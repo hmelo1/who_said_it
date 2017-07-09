@@ -30,15 +30,29 @@ $(function() {
 			alert('Please select 2 characters');
 		} else {
 			var AUTH_TOKEN = $("input[name='authenticity_token']").val();
-			var selectedCharacters = $('.selected :input').serializeArray();
 			var url = this.action + "?&authenticity_token=" + AUTH_TOKEN
+			var character1 = $('.selected :input')[0];
+			var character2 = $('.selected :input')[1];
+			var characters = $('.selected :input').serializeArray();
+
+			data = {
+				'authenticity_token': AUTH_TOKEN,
+				'characters' : [
+				{
+					'name': character1.name,
+					'id': character1.id
+				},
+				{
+					'name': character2.name,
+					'id': character2.id
+				}]
+			}
 
 			$.ajax({
 				type: "POST",
 				url: url,
-				data: selectedCharacters,
+				data: data,
 				success: function() {
-					debugger
 				}
 			});
 		}
