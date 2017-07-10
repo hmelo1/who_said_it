@@ -5,9 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Inline SVG
-gem 'inline_svg'
-
 # jQuery Rails
 gem 'jquery-rails'
 

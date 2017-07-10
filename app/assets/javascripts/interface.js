@@ -30,7 +30,8 @@ $(function() {
 			alert('Please select 2 characters');
 		} else {
 			var AUTH_TOKEN = $("input[name='authenticity_token']").val();
-			var url = this.action + "?&authenticity_token=" + AUTH_TOKEN
+			var url = this.action
+			 // + "?&authenticity_token=" + AUTH_TOKEN
 			var character1 = $('.selected :input')[0];
 			var character2 = $('.selected :input')[1];
 			var characters = $('.selected :input').serializeArray();
