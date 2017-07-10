@@ -2,9 +2,9 @@ class GamesController < ApplicationController
 	def create
 		@character1 = Character.find_by(game_params["0"])
 		@character2 = Character.find_by(game_params["1"])
-		@game = Game.new
+		@game = Game.create(state: [])
 		binding.pry
-		@game.character_ids = [@character1.id, @character2.id]
+		@game.characters = [@character1, @character2]
 
 		# @game.characters << @character1
 		# @game.characters << @character2
