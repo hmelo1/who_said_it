@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(version: 20170710182900) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.text "state"
+    t.text "state", default: "[]"
+    t.boolean "completed", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
