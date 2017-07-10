@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170710182900) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "game_characters", force: :cascade do |t|
+  create_table "game_logs", force: :cascade do |t|
     t.integer "game_id"
     t.integer "character_id"
     t.datetime "created_at", null: false

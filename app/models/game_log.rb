@@ -1,4 +1,4 @@
-class GameCharacter < ApplicationRecord
+class GameLog < ApplicationRecord
 	belongs_to :game
   belongs_to :character
 end
