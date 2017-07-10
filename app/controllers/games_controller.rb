@@ -1,9 +1,11 @@
 class GamesController < ApplicationController
 	def create
-		binding.pry
 		@character1 = Character.find_by(game_params["0"])
 		@character2 = Character.find_by(game_params["1"])
 		@game = Game.new
+		binding.pry
+		@game.character_ids = [@character1.id, @character2.id]
+
 		# @game.characters << @character1
 		# @game.characters << @character2
 		# @character1.games << @game
