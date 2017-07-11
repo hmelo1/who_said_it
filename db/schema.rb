@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20170710182900) do
     t.string "title_1"
     t.string "title_2"
     t.string "img"
+    t.string "img_selected"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
