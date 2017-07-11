@@ -1,3 +1,4 @@
 class QuoteSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :content, :source, :tag
+  belongs_to :character, serializer: CharacterSerializer
 end

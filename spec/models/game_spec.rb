@@ -21,35 +21,14 @@ RSpec.describe Game, :type => :model do
     end
   end
 
-  # describe "Character Attributes" do
-  #   it 'has a name' do
-  #   	expect(@character.name).to eq("Skeletor")
-  #   end
+  describe "Character Attributes" do
+    it 'has a state' do
+    	expect(@game.state).to eq("[]")
+    end
 
-  #   it 'has a title' do
-  #   	expect(@character.title).to eq("Master Villain")
-  #   end
-
-  #   it 'has an image url' do
-  #   	expect(@character.img).to eq("skeletor.jpg")
-  #   end
-  # end
-
-  # describe 'Character Validations' do   
-  #   it "doesn't save without a name" do
-  #     invalid_character = Character.new(title: "President", img: "president.jpg")
-  #     expect(invalid_character.save).to eq(false)
-  #   end
-
-  #   it "doesn't save without a title" do
-  #     invalid_character = Character.new(name: "Mr. Jackson", img: "president.jpg")
-  #     expect(invalid_character.save).to eq(false)
-  #   end
-
-  #   it "doesn't save without an image" do
-  #     invalid_character = Character.new(name: "Mr. Jackson", title: "singer")
-  #     expect(invalid_character.save).to eq(false)
-  #   end
-  # end
+    it 'has boolean for complete/incomplete' do
+    	expect(@game.completed).to eq(false)
+    end
+  end
   
 end

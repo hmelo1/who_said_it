@@ -11,9 +11,9 @@ $(function() {
 		$character_select_div.delay(400).fadeIn(300);
 	})
 
-	// Character Selection
+	// Character Selection -- Section #2
 
-	// Create a 'Selected/Active State for Clicked Cards'
+	// Create a 'Selected/Active State for Clicked Cards
 	$('.card').click(function() {
 		if ($('.selected').length < 2) {
 			$(this).toggleClass('selected');
@@ -53,7 +53,8 @@ $(function() {
 				type: "POST",
 				url: url,
 				data: data,
-				success: function() {
+				success: function(response) {
+					debugger
 				}
 			});
 		}

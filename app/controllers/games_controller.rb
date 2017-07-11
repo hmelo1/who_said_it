@@ -4,7 +4,7 @@ class GamesController < ApplicationController
 		@character2 = Character.find_by(game_params["1"])
 		@game = Game.create
 		@game.characters = [@character1, @character2]
-		binding.pry
+    render json: @game, status: 201
 	end
 
 	def save
