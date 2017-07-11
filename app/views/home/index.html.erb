@@ -11,8 +11,8 @@
 	  </div>
 	  <% @characters.each_slice(4) do |slice| %>
 		  <div class="row">
-		    <% slice.each do |object| %>
-		      <%= render partial: "card", locals: { object: object } %>
+		    <% slice.each do |character| %>
+		      <%= render partial: "card", locals: { object: character } %>
 		    <% end %>
 		  </div>
 		<% end %>
