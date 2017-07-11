@@ -3,15 +3,18 @@ require 'rails_helper'
 RSpec.describe Quote, :type => :model do
 
   before do
-    @character = Character.create(name: "Skeletor", title: "Master Villain", img: "skeletor.png")
-    @quote1 = Quote.create(content: "I help no one but myself.", source: "www.source.com", tag: "ego", character_id: @character.id)
-    @quote2 = Quote.create(content: "I'm so powerful, I even impress myself.", source: "www.source.com", tag: "ego", character_id: @character.id)
-    @quote3 = Quote.create(content: "Listen, I am not nice, I am not kind, and I am not wonderful.", source: "www.source.com", tag: "ego", character_id: @character.id)
+    @character1 = Character.create(name: "Skeletor", title_1: "Master Villain", title_2: "Master Villain", img: "skeletor.jpg")
+    @character2 = Character.create(name: "George Carlin", title_1: "Master Villain", title_2: "Master Villain", img: "george_carlin.jpg")
+    @quote1 = Quote.create(content: "I help no one but myself.", source: "www.source.com", tag: "ego", character_id: @character1.id)
+    @quote2 = Quote.create(content: "I'm so powerful, I even impress myself.", source: "www.source.com", tag: "ego", character_id: @character2.id)
+    @quote3 = Quote.create(content: "Listen, I am not nice, I am not kind, and I am not wonderful.", source: "www.source.com", tag: "ego", character_id: @character1.id)
+    @game = Game.create
+    @game.characters = [@character1, @character2]
   end
 
   describe "Quote Associations" do
     it 'belongs to a character' do
-      expect(@quote1.character).to eq(@character)
+      expect(@quote1.character).to eq(@character1)
     end
   end
 
@@ -32,17 +35,17 @@ RSpec.describe Quote, :type => :model do
 
   describe 'Quote Validations' do   
     it "doesn't save without content" do
-      invalid_quote = Quote.new(tag: "general", source: "www.quotes.com", character_id: @character.id)
+      invalid_quote = Quote.new(tag: "general", source: "www.quotes.com", character_id: @character1.id)
       expect(invalid_quote.save).to eq(false)
     end
 
     it "doesn't save without a source" do
-      invalid_quote = Quote.new(content: "this is a quote", tag: "general", character_id: @character.id)
+      invalid_quote = Quote.new(content: "this is a quote", tag: "general", character_id: @character1.id)
       expect(invalid_quote.save).to eq(false)
     end
 
     it "doesn't save without a tag" do
-      invalid_quote = Quote.new(content: "this is some content", source: "www.quotes.com", character_id: @character.id)
+      invalid_quote = Quote.new(content: "this is some content", source: "www.quotes.com", character_id: @character1.id)
       expect(invalid_quote.save).to eq(false)
     end    
   end
