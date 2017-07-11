@@ -11,6 +11,16 @@ class GamesController < ApplicationController
 		# After game is finished it is saved
 	end
 
+	def index
+		@games = Game.all
+		render json: @games
+	end
+
+	def show 
+		@game = Game.find(params[:id])
+		render json: @game
+	end
+
 	private
 
 	def game_params
