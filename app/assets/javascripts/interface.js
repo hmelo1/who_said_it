@@ -34,7 +34,6 @@ $(function() {
 			 // + "?&authenticity_token=" + AUTH_TOKEN
 			var character1 = $('.selected :input')[0];
 			var character2 = $('.selected :input')[1];
-			var characters = $('.selected :input').serializeArray();
 
 			data = {
 				'authenticity_token': AUTH_TOKEN,
