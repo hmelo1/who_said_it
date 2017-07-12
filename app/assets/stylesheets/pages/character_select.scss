@@ -1,8 +1,14 @@
+// Character Select Page
+
 #character-select {
 	h1.cs-title {
 		text-align: center;
 	}
 	.name, {
 		font-size: 3rem;
+	}
+	button {
+		margin:0 auto;
+    display:block;
 	}
 }
