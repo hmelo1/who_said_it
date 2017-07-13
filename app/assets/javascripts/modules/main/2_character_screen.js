@@ -1,14 +1,14 @@
 (function (){
 
-	var characterSelect = {
+	var characterScreen = {
 		init: function() {
 			this.cacheDom();
       this.bindEvents();
 		},
 		cacheDom: function() {
-      this.$characterSelect = $('#character-select');
-      this.$card = this.$characterSelect.find('.card');
-			this.$characterForm = this.$characterSelect.find('form');
+      this.$characterScreen = $('#character-screen');
+      this.$card = this.$characterScreen.find('.card');
+			this.$characterForm = this.$characterScreen.find('form');
 		},
     bindEvents: function() {
       this.$card.on('click', this.selectCards);
@@ -55,6 +55,6 @@
       }
     }
 	}
-	characterSelect.init();
+	characterScreen.init();
   
 })()
