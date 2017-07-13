@@ -1,0 +1,3 @@
+-Create Flip Cards
+-Randomize 10 quotes for each game, either in Ruby or JS
+-Create Game Div
