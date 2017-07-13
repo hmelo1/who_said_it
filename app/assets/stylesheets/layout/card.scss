@@ -11,6 +11,11 @@
     transform: scale(1.05);
     cursor: pointer;
   }
+  /* Add rounded corners to the top left and the top right corner of the image */
+  img {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+  }
 }
 
 /* Add some padding inside the card container */
@@ -18,11 +23,7 @@
   padding: 2px 16px;
 }
 
-/* Add rounded corners to the top left and the top right corner of the image */
-img {
-  border-radius: 10px 10px 0 0;
-  width: 100%;
-}
+
 
 .selected {
   border: 10px #fff solid;
