@@ -15,7 +15,7 @@
       this.$playGame.on('click', this.swapWelcome.bind(this));
     },
     onLoad: function() {
-    	this.$characterSelect.hide().removeClass('.hide');
+    	// this.$characterSelect.hide().removeClass('.hide');
     },
     swapWelcome: function() {
       this.$welcome.fadeOut();

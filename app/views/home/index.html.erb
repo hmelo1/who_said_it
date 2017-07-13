@@ -12,7 +12,7 @@
 	  <% @characters.each_slice(4) do |slice| %>
 		  <div class="row">
 		    <% slice.each do |character| %>
-		      <%= render partial: "card", locals: { object: character } %>
+		      <%= render partial: 'components/card', locals: { object: character } %>
 		    <% end %>
 		  </div>
 		<% end %>
