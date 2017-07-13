@@ -1,21 +1,2 @@
-<div id="welcome">
-  <%= svg 'who_said_it' %>
-	<h4 id="subtitle">The Game of Deciding Who Said What</h3>
-	<button id="play-game">Play Game</button>
-</div>
-
-<div id="character-select" class="hide">
-	<%= form_tag(create_game_path, method: 'post', id: 'create-game') do %>
-	  <div class="row">
-	     <h1 class="cs-title">Character Selection</h1>
-	  </div>
-	  <% @characters.each_slice(4) do |slice| %>
-		  <div class="row">
-		    <% slice.each do |character| %>
-		      <%= render partial: 'components/card', locals: { object: character } %>
-		    <% end %>
-		  </div>
-		<% end %>
-	  <button type="submit">Start Game</button>
-	<% end %>
-</div>
+<%= render 'sections/welcome' %>
+<%= render 'sections/character_select' %>
