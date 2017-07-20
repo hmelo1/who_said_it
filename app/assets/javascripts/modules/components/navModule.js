@@ -1,5 +1,5 @@
 (function() {
-	var navigation = {
+	var navModule = {
 		init: function() {
 			this.cacheDom();
 			this.bindEvents();
@@ -15,6 +15,6 @@
 		}
 	}
 
-	navigation.init();
+	navModule.init();
 
 })()
