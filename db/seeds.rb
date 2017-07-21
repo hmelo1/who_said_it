@@ -38,7 +38,7 @@ character_import("god", "God", "Alpha and Omega",  "Expert Sculptor", "god.jpg",
 character_import("hitler", "Adolf Hitler", "Leader of the Nazi Party", "Mass-Murderer", "hitler.jpg", "hitler_selected.jpg")
 
 # King Joffrey
-character_import("mr_burns", "Mr. Burns", "Nuclear Power Plant Owner", "Trap Door Activator", "mr_burns.jpg", "hitler_selected.jpg")
+character_import("mr_burns", "Mr. Burns", "Nuclear Power Plant Owner", "Trap Door Activator", "mr_burns.jpg", "mr_burns_selected.jpg")
 
 # Mr. Burns
 character_import("king_joffrey", "King Joffrey", " Heir to King Baratheon", "Egomaniacal Snowflake", "king_joffrey.jpg", "king_joffrey_selected.jpg",)
