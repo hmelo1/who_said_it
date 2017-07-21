@@ -8,6 +8,6 @@
 //= require classes/game
 
 require('./modules/components/navModule');
-require('./modules/main/welcomeModule');
-require('./modules/main/characterModule');
-require('./modules/main/gameModule');
+require('./modules/structure/welcomeModule');
+require('./modules/structure/characterModule');
+require('./modules/structure/gameModule');

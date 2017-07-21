@@ -9,7 +9,7 @@ class Game < ApplicationRecord
       quotes.where(id: ten_quote_ids)
     else
       ten_quotes = quotes.order('RANDOM()').limit(10) 
-      update ten_quote_ids: ten_quotes.map(&:content)
+      update ten_quote_ids: ten_quotes.map(&:id)
       ten_quotes
     end
   end
