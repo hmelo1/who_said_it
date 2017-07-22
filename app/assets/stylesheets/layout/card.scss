@@ -1,31 +1,43 @@
 .card {
-  /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 10px; /* 5px rounded corners */
-  transition: transform .2s ease-in-out;
-  margin: 20px 0; 
-  &:hover {
-    /* On mouse-over, add a deeper shadow */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    transform: scale(1.05);
-    cursor: pointer;
+  position: relative;
+  float: left;
+  padding-bottom: 25%;
+  width: 25%;
+  text-align: center;
+  margin: 50px 0;
+  cursor: pointer;
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 95%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 0.3s;
+            transition: transform 0.3s;
+    img {
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+    }
+    .card-container {
+      margin-top: -5px;
+      background-color: $secondary-color;
+      padding: 10px 16px;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 10px 8px 0 rgba(0,0,0,0.4);
+    }
   }
-  /* Add rounded corners to the top left and the top right corner of the image */
-  img {
-    border-radius: 10px 10px 0 0;
-    width: 100%;
+  .card-back {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
   }
 }
 
-/* Add some padding inside the card container */
-.card-container {
-  padding: 10px 16px 2px 16px;
+.card.selected .card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
-
-
-.selected {
-  border: 10px #fff solid;
-  transform: scale(1.05);
+.card.selected .card-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
