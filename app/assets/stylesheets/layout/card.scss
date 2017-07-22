@@ -16,14 +16,19 @@
             transition: transform 0.3s;
     img {
       width: 100%;
+      border: 3px solid rgba(0,0,0,0.5);
+      border-bottom: 0px;
       border-radius: 10px 10px 0 0;
     }
     .card-container {
+      width: 100%;
       margin-top: -5px;
       background-color: $secondary-color;
-      padding: 10px 16px;
+      padding: 10px 0;
+      border: 3px solid rgba(0,0,0,0.5);
+      border-top: 0px;
       border-radius: 0 0 10px 10px;
-      box-shadow: 0 10px 8px 0 rgba(0,0,0,0.4);
+      box-shadow: 0 6px 8px 0 rgba(0,0,0,0.4);
     }
   }
   .card-back {
@@ -31,6 +36,8 @@
             transform: rotateY(-180deg);
   }
 }
+
+// Transform on Selected
 
 .card.selected .card-front {
   -webkit-transform: rotateY(-180deg);
@@ -40,4 +47,16 @@
 .card.selected .card-back {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
+}
+
+// Change Border Color on Selected
+
+.card.selected img {
+  border: 3px solid rgba(255,255,255,.9);
+  border-bottom: 0px;
+}
+
+.card.selected .card-container {
+  border: 3px solid rgba(255,255,255,.9);
+  border-top: 0px;
 }
