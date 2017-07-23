@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170721210500) do
     t.string "source"
     t.string "tag"
     t.integer "character_id"
+    t.string "character_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["character_id"], name: "index_quotes_on_character_id"
