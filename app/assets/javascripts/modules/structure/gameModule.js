@@ -3,7 +3,7 @@
   var gameModule = {
   	// Game data passed from character screen
     createGame: function(data) {
-    	debugger
+      debugger
       var game = new Game(data);
     }
   }

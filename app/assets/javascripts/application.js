@@ -4,7 +4,9 @@
 //= require jquery_ujs
 //= require TweenMax.min
 //= require EasePack.min
+//= require handlebars
 
+// Classes
 //= require classes/game
 
 // Components

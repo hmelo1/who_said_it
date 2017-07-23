@@ -14,8 +14,7 @@ ActiveRecord::Schema.define(version: 20170721210500) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
-    t.string "title_1"
-    t.string "title_2"
+    t.string "description"
     t.string "img"
     t.string "img_selected"
     t.datetime "created_at", null: false

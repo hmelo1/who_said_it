@@ -1,5 +1,5 @@
 class CharacterSerializer < ActiveModel::Serializer
-  attributes :id, :name, :title_1, :title_2
+  attributes :id, :name, :description
   has_many :quotes
   has_many :games
 end
