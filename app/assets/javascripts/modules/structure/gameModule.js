@@ -4,22 +4,20 @@
   	// Game data passed from character screen
     createGame: function(data) {
       var game = new Game(data);
-		  
-		  var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
-		  var characters = pictureTemplate(game.characters);
-		  $('#game-pictures').html(characters);
-		  
+		   
 		  var counter = 0;
+		  generateCharacters(game.characters);
 		  generateQuote(game.quotes[counter]);
-		  analyzeQuote(game, counter);
-		  
 
-		  function analyzeQuote(game,counter) {
-		  	$('.game-character-submit').on('click', function() {
-		  		alert('hello')
-		  	})
+		  $('.game-character-submit').click(function() {
+		  	debugger
+		  })
+
+	  	function generateCharacters(gameCharacters) {
+		  	var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
+			  var characters = pictureTemplate(gameCharacters);
+			  $('#game-pictures').html(characters);
 		  }
-
 
 		  function generateQuote(gameQuote) {
 		  	var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
