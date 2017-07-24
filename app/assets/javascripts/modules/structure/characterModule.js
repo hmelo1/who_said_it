@@ -33,7 +33,7 @@
 	      var character1 = $('.selected :input')[0];
 	      var character2 = $('.selected :input')[1];
 
-	      data = {
+	      object = {
 	        'authenticity_token': AUTH_TOKEN,
 	        'characters' : [
 	        {
@@ -49,7 +49,8 @@
 	      $.ajax({
 	        type: "POST",
 	        url: url,
-	        data: data,
+	        data: object,
+					// why is this object accessible inside function scopeProblem() in the next module?
 	        success: function(data) {
 	          gameModule.createGame(data);
 	        }
