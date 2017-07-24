@@ -17,7 +17,7 @@
         // How can I access generateQuote here, getting Uncaught ReferenceError
       });
       
-      function analyzeQuote(counter, game, originalEvent, originalThis) { 
+      function analyzeQuote(counter, game, originalEvent, originalThis) {
         if ($(originalThis).data('id') == game.quotes[counter].character_id) {
           alert('correct');
           game.state.push(true);
