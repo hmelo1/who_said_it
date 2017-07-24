@@ -131,15 +131,19 @@
   }
 }
 
-#subtitle {
-  text-align: center;
-  opacity: 0;
-  animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.5s;
-}
+#welcome-screen {
+  // Subtitle
 
-// Button
+  #subtitle {
+    text-align: center;
+    opacity: 0;
+    animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.5s;
+  }
 
-#play {
-  opacity: 0;
-  animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.8s;
+  // Button
+
+  #play {
+    opacity: 0;
+    animation: fadeup 1s cubic-bezier(0.215, 0.61, 0.355, 1) forwards 3.8s;
+  }
 }

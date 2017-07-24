@@ -11,6 +11,14 @@
 		  
 		  var counter = 0;
 		  generateQuote(game.quotes[counter]);
+		  analyzeQuote(game, counter);
+		  
+
+		  function analyzeQuote(game,counter) {
+		  	$('.game-character-submit').on('click', function() {
+		  		alert('hello')
+		  	})
+		  }
 
 
 		  function generateQuote(gameQuote) {

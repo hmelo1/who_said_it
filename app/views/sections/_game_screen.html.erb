@@ -22,9 +22,8 @@
 
 <script id="game-picture-template" type="text/x-handlebars-template">
   {{#each this}}
-    <div id="character_{{@index}}" class="six columns">
-      <p>{{name}}</p>
-      <img src="/app/assets/images/characters/{{img}}">
+    <div class="six columns game-character">
+      <button class="game-character-submit" data-id="{{id}}" data-name={{name}}>{{name}}</button>
     </div>
   {{/each}}
 </script>
