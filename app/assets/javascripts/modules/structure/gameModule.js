@@ -12,12 +12,12 @@
       firstQuote(game.quotes[counter]);
 
       $('.game-character-submit').on("click", function(){
-        analyzeQuote(counter, game, this);
+        analyzeQuote(this);
         counter++;
-        newQuote(counter, game);
+        newQuote();
       });
       
-      function analyzeQuote(counter, game, originalThis) {
+      function analyzeQuote(originalThis) {
         if ($(originalThis).data('id') == game.quotes[counter].character_id) {
           alert('correct');
           game.state.push(true);
@@ -27,7 +27,7 @@
         }
       }
 
-      function newQuote(counter, game) {
+      function newQuote() {
         if (counter < 9) {
           var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
           var quote = quoteTemplate(game.quotes[counter]);
