@@ -22,18 +22,15 @@
 
 <script id="game-picture-template" type="text/x-handlebars-template">
   {{#each this}}
-    <div class="six columns">
-      <p>{{id}}</p>
+    <div id="character_{{@index}}" class="six columns">
       <p>{{name}}</p>
-      <img src="/app/assets/images/characters/{{src}}">
+      <img src="/app/assets/images/characters/{{img}}">
     </div>
   {{/each}}
 </script>
 
 <script id="game-quote-template" type="text/x-handlebars-template">
-  {{#each this}}
-    <div>
-      <h3>"{{content}}"</h3>
-    </div>
-  {{/each}}
+  <div>
+    <h3>"{{content}}"</h3>
+  </div>
 </script>
