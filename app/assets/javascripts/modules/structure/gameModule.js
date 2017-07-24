@@ -1,7 +1,7 @@
 (function() {
 
   var gameModule = {
-  	// Game data passed from character screen
+
     createGame: function(data) {
       var game = new Game(data);
 		   
@@ -9,9 +9,9 @@
 		  generateCharacters(game.characters);
 		  generateQuote(game.quotes[counter]);
 
-		  $('.game-character-submit').click(function() {
-		  	debugger
-		  })
+		  // $('.game-character-submit').click(function() {
+		  // 	debugger
+		  // })
 
 	  	function generateCharacters(gameCharacters) {
 		  	var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
