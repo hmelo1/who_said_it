@@ -17,7 +17,11 @@
       });
       // counter and game both accessible here
       function analyzeQuote(counter, game, originalEvent, originalThis) {
-   			
+   			if ($(originalThis).data('id') == game.quotes[counter].character_id) {
+          alert('correct');
+        } else {
+          alert('incorrect');
+        }
       }
     },
     generateQuote: function(gameQuote) {
