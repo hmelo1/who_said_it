@@ -3,7 +3,7 @@ class Game {
 	  this.id = attributes.id;
 	  this.characters = attributes.characters;
 	  this.quotes = attributes.game_quotes;
-	  this.state = attributes.state;
+	  this.state = JSON.parse(attributes.state);
 	  this.completed = attributes.completed;
 	}
 }

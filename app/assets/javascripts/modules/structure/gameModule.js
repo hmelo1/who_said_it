@@ -15,12 +15,14 @@
   	  $('.game-character-submit').on("click", function(event){
         analyzeQuote(counter, game, event, this); 
       });
-      // counter and game both accessible here
+      
       function analyzeQuote(counter, game, originalEvent, originalThis) {
    			if ($(originalThis).data('id') == game.quotes[counter].character_id) {
           alert('correct');
+          game.state.push(true);
         } else {
           alert('incorrect');
+          game.state.push(false);
         }
       }
     },
