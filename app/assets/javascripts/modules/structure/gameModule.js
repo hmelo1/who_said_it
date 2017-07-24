@@ -12,13 +12,13 @@
       this.generateQuote(game.quotes[counter]);
       this.generateCharacters(game.characters);
 
-  	  $('.game-character-submit').click(scopeProblem);
+  	  $('.game-character-submit').on("click", function(originalEvent){
+  	  	debugger
+        scopeProblem(counter, game, originalEvent, this); 
+      });
       // counter and game both accessible here
-      function scopeProblem() {
-        // Uncaught ReferenceError: game is not defined
-        // Uncaught ReferenceError: counter is not defined
-
-        // The only thing that I can access here is the original object that I sent in the AJAX post request in the previous module
+      function scopeProblem(counter, game, originalEvent, originalThis) {
+   			
       }
     },
     generateQuote: function(gameQuote) {

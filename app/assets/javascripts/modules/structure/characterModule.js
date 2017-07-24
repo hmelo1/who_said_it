@@ -33,7 +33,7 @@
 	      var character1 = $('.selected :input')[0];
 	      var character2 = $('.selected :input')[1];
 
-	      object = {
+	      var object = {
 	        'authenticity_token': AUTH_TOKEN,
 	        'characters' : [
 	        {
