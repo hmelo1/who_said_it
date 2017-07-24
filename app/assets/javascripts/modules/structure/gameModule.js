@@ -7,19 +7,17 @@
     },
     playGame: function(game) {
       var counter = 0;
-      if (counter == 0) {
-        firstQuote(game.quotes[counter]);
-      }
-      generateCharacters(game.characters);
 
-      $('.game-character-submit').on("click", function(event){
-        analyzeQuote(counter, game, event, this);
+      generateCharacters(game.characters);
+      firstQuote(game.quotes[counter]);
+
+      $('.game-character-submit').on("click", function(){
+        analyzeQuote(counter, game, this);
         counter++;
-        newQuote(counter, game, event);
-        // How can I access generateQuote here, getting Uncaught ReferenceError
+        newQuote(counter, game);
       });
       
-      function analyzeQuote(counter, game, originalEvent, originalThis) {
+      function analyzeQuote(counter, game, originalThis) {
         if ($(originalThis).data('id') == game.quotes[counter].character_id) {
           alert('correct');
           game.state.push(true);
@@ -29,10 +27,14 @@
         }
       }
 
-      function newQuote(counter, game, originalEvent) {
-        var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
-        var quote = quoteTemplate(game.quotes[counter]);
-        $('#game-quotes').html(quote);
+      function newQuote(counter, game) {
+        if (counter < 9) {
+          var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
+          var quote = quoteTemplate(game.quotes[counter]);
+          $('#game-quotes').html(quote);
+        } else {
+          alert('No More Quotes Available');
+        }
       } 
 
       function firstQuote(gameQuote) {
