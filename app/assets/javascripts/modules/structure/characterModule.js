@@ -14,7 +14,7 @@
 		},
 	  bindEvents: function() {
 	    this.$card.on('click', this.selectCards);
-	    this.$characterForm.on('submit', this.buildGame);
+	    this.$characterForm.on('submit', this.postGame);
 	  },
 	  selectCards: function(event) {
 	  	if ($('.selected').length < 2) {
@@ -23,7 +23,7 @@
 				$(this).removeClass('selected');
 			}
 	  },
-	  buildGame: function(event) {
+	  postGame: function(event) {
 	  	event.preventDefault();
 	    if ($('.selected').length < 2) {
 	      alert('Please select 2 characters');

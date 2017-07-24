@@ -12,12 +12,11 @@
       this.generateQuote(game.quotes[counter]);
       this.generateCharacters(game.characters);
 
-  	  $('.game-character-submit').on("click", function(originalEvent){
-  	  	debugger
-        scopeProblem(counter, game, originalEvent, this); 
+  	  $('.game-character-submit').on("click", function(event){
+        analyzeQuote(counter, game, event, this); 
       });
       // counter and game both accessible here
-      function scopeProblem(counter, game, originalEvent, originalThis) {
+      function analyzeQuote(counter, game, originalEvent, originalThis) {
    			
       }
     },
