@@ -35,12 +35,12 @@
     checkComplete: function() {
       this.counter++;
 
-      if (this.counter >= 10) {
-        // End Game
-        this.postCompletedGame();
-      } else {
+      if (this.counter < 10) {    
         // Continue Game
         this.renderQuote();
+      } else {
+        // End Game
+        this.postCompletedGame();
       }
     },
     renderQuote: function() {
