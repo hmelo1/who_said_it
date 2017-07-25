@@ -1,13 +1,14 @@
 (function() {
 
   var gameModule = {
-    cacheHandlebars: function() {
+    cacheDom: function() {
       this.gameCharacterSubmit = $('.game-character-submit');
     },
     bindEvents: function() {
       var originalThis = this;
       this.gameCharacterSubmit.on("click", function(event) {
-        originalThis.analyzeAndCheck(event);
+        originalThis.checkAnswer(event);
+        originalThis.checkComplete();
       });
     },
     createGame: function(data) {
@@ -16,13 +17,13 @@
     },
     playGame: function() {
       this.counter = 0;
-
       this.generateCharacters(this.game.characters);
       this.renderQuote();
-      this.cacheHandlebars();
+      // DOM needs to be cached after handlebars templates are rendered
+      this.cacheDom();
       this.bindEvents();       
     },
-    analyzeAndCheck: function(originalEvent) {
+    checkAnswer: function(originalEvent) {
       if ($(originalEvent.target).data('id') == this.game.quotes[this.counter].character_id) {
         alert('correct');
         this.game.state.push(true);
@@ -30,7 +31,8 @@
         alert('incorrect');
         this.game.state.push(false);
       }
-
+    },
+    checkComplete: function() {
       this.counter++;
 
       if (this.counter >= 10) {
