@@ -1,76 +1,76 @@
 (function() {
 
   var gameModule = {
-    createGame: function(data) {
-      var game = new Game(data);
-      this.playGame(game);
+    cacheHandlebars: function() {
+      this.gameCharacterSubmit = $('.game-character-submit');
     },
-    playGame: function(game) {
-      var counter = 0;
-
-      generateCharacters(game.characters);
-      renderQuote();
-
-      $('.game-character-submit').on("click", function(){
-        analyzeQuote(this);
-        checkGameOver();
+    bindEvents: function() {
+      var originalThis = this;
+      this.gameCharacterSubmit.on("click", function(event) {
+        originalThis.analyzeAndCheck(event);
       });
+    },
+    createGame: function(data) {
+      this.game = new Game(data);
+      this.playGame();
+    },
+    playGame: function() {
+      this.counter = 0;
 
-      function checkGameOver() {
-        counter++;
-        if (counter >= 10) {
-          // End Game
-          postCompletedGame();
-        } else {
-          // Continue Game
-          renderQuote();
+      this.generateCharacters(this.game.characters);
+      this.renderQuote();
+      this.cacheHandlebars();
+      this.bindEvents();       
+    },
+    analyzeAndCheck: function(originalEvent) {
+      if ($(originalEvent.target).data('id') == this.game.quotes[this.counter].character_id) {
+        alert('correct');
+        this.game.state.push(true);
+      } else {
+        alert('incorrect');
+        this.game.state.push(false);
+      }
+
+      this.counter++;
+
+      if (this.counter >= 10) {
+        // End Game
+        this.postCompletedGame();
+      } else {
+        // Continue Game
+        this.renderQuote();
+      }
+    },
+    renderQuote: function() {
+      var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
+      var quote = quoteTemplate(this.game.quotes[this.counter]);
+      $('#game-quotes').html(quote);
+    },
+    generateCharacters: function(gameCharacters) {
+      var image1path = $(`img[alt='${this.game.characters[0].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
+      var image2path = $(`img[alt='${this.game.characters[1].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
+      var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
+      var characters = pictureTemplate(gameCharacters);
+      $('#game-pictures').html(characters);
+      $('#selected-character-0').attr('src', image1path);
+      $('#selected-character-1').attr('src', image2path);
+    },
+    postCompletedGame: function() {
+      var url = "/games/save";
+
+      var game_data = {
+        id: this.game.id,
+        state: this.game.state
+      }
+
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: game_data,
+        success: function() {
+          alert('working');
         }
-      }
-      
-      function analyzeQuote(originalThis) {
-        if ($(originalThis).data('id') == game.quotes[counter].character_id) {
-          alert('correct');
-          game.state.push(true);
-        } else {
-          alert('incorrect');
-          game.state.push(false);
-        }
-      } 
-
-      function renderQuote() {
-        var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
-        var quote = quoteTemplate(game.quotes[counter]);
-        $('#game-quotes').html(quote);
-      }
-
-      function generateCharacters(gameCharacters) {
-        var image1path = $(`img[alt='${game.characters[0].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
-        var image2path = $(`img[alt='${game.characters[1].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
-        var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
-        var characters = pictureTemplate(gameCharacters);
-        $('#game-pictures').html(characters);
-        $('#selected-character-0').attr('src', image1path);
-        $('#selected-character-1').attr('src', image2path);
-      }
-
-      function postCompletedGame() {
-        console.log(game);
-        var url = "/games/save";
-
-        var game_data = {
-          id: game.id,
-          state: game.state
-        }
-
-        $.ajax({
-          type: "POST",
-          url: url,
-          data: game_data,
-          success: function() {
-            
-          }
-        });
-      }
+      });
     }
   }
 
