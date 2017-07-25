@@ -20,7 +20,7 @@
         counter++;
         if (counter >= 10) {
           // End Game
-          postGame();
+          postCompletedGame();
         } else {
           // Continue Game
           renderQuote();
@@ -53,7 +53,7 @@
         $('#selected-character-1').attr('src', image2path);
       }
 
-      function postGame() {
+      function postCompletedGame() {
         console.log(game);
         var url = "/games/save";
 
@@ -66,9 +66,8 @@
           type: "POST",
           url: url,
           data: game_data,
-          // why is this object accessible inside function scopeProblem() in the next module?
-          success: function(data) {
-            alert('hi');
+          success: function() {
+            
           }
         });
       }

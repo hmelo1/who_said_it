@@ -14,7 +14,7 @@
 		},
 	  bindEvents: function() {
 	    this.$card.on('click', this.selectCards);
-	    this.$characterForm.on('submit', this.postGame);
+	    this.$characterForm.on('submit', this.postNewGame);
 	  },
 	  selectCards: function(event) {
 	  	if ($('.selected').length < 2) {
@@ -23,7 +23,7 @@
 				$(this).removeClass('selected');
 			}
 	  },
-	  postGame: function(event) {
+	  postNewGame: function(event) {
 	  	event.preventDefault();
 	    if ($('.selected').length < 2) {
 	      alert('Please select 2 characters');
@@ -50,7 +50,6 @@
 	        type: "POST",
 	        url: url,
 	        data: object,
-					// why is this object accessible inside function scopeProblem() in the next module?
 	        success: function(data) {
 	          gameModule.createGame(data);
 	        }
