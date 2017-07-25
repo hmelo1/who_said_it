@@ -9,7 +9,7 @@
       var counter = 0;
 
       generateCharacters(game.characters);
-      firstQuote(game.quotes[counter]);
+      renderNewQuote();
 
       $('.game-character-submit').on("click", function(){
         analyzeQuote(this);
@@ -18,7 +18,6 @@
 
       function checkGameOver() {
         counter++;
-        console.log(counter)
         if (counter >= 10) {
           debugger
         } else {
@@ -36,17 +35,11 @@
         }
       } 
 
-      function newQuote() {
+      function renderNewQuote() {
         var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
         var quote = quoteTemplate(game.quotes[counter]);
         $('#game-quotes').html(quote);
-      } 
-
-      function firstQuote(gameQuote) {
-        var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
-        var quote = quoteTemplate(gameQuote);
-        $('#game-quotes').html(quote);
-      } 
+      }
 
       function generateCharacters(gameCharacters) {
         var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
