@@ -9,7 +9,7 @@
       var counter = 0;
 
       generateCharacters(game.characters);
-      renderNewQuote();
+      renderQuote();
 
       $('.game-character-submit').on("click", function(){
         analyzeQuote(this);
@@ -19,9 +19,12 @@
       function checkGameOver() {
         counter++;
         if (counter >= 10) {
-          postCompletedGame();
+          // End Game
+          game.completed = true
+          postGame();
         } else {
-          renderNewQuote();
+          // Continue Game
+          renderQuote();
         }
       }
       
@@ -35,7 +38,7 @@
         }
       } 
 
-      function renderNewQuote() {
+      function renderQuote() {
         var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
         var quote = quoteTemplate(game.quotes[counter]);
         $('#game-quotes').html(quote);
@@ -49,6 +52,20 @@
         $('#game-pictures').html(characters);
         $('#selected-character-0').attr('src', image1path);
         $('#selected-character-1').attr('src', image2path);
+      }
+
+      function postGame() {
+        console.log(game);
+
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: game,
+          // why is this object accessible inside function scopeProblem() in the next module?
+          success: function(data) {
+            gameModule.createGame(data);
+          }
+        });
       }
     }
   }
