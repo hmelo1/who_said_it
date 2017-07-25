@@ -14,10 +14,11 @@
       $('.game-character-submit').on("click", function(){
         analyzeQuote(this);
         newQuote();
+        checkGameOver();
       });
       
       function analyzeQuote(originalThis) {
-        if (counter <= 9 ) {
+        if (counter < 10) {
           if ($(originalThis).data('id') == game.quotes[counter].character_id) {
             alert('correct');
             game.state.push(true);
@@ -26,19 +27,20 @@
             game.state.push(false);
           }
           counter++;
-        } else {
-          debugger
         }
-      }
-          
+      } 
 
       function newQuote() {
-        if (counter <= 9) {
+        if (counter < 10) {
           var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
           var quote = quoteTemplate(game.quotes[counter]);
           $('#game-quotes').html(quote);
         }
       } 
+
+      function checkGameOver() {
+        debugger
+      }
 
       function firstQuote(gameQuote) {
         var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
