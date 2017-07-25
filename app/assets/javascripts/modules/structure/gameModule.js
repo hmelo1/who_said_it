@@ -1,12 +1,19 @@
 (function() {
 
   var gameModule = {
+    init: function() {
+      this.cacheDom();
+    },
     cacheDom: function() {
-      this.gameCharacterSubmit = $('.game-character-submit');
+      this.$gameQuotes = $('#game-quotes');
+      this.$gamePictures = $('#game-pictures');
+    },
+    cacheHandlebars: function() {
+      this.$gameCharacterSubmit = $('.game-character-submit');
     },
     bindEvents: function() {
       var originalThis = this;
-      this.gameCharacterSubmit.on("click", function(event) {
+      this.$gameCharacterSubmit.on("click", function(event) {
         originalThis.checkAnswer(event);
         originalThis.checkComplete();
       });
@@ -17,10 +24,10 @@
     },
     playGame: function() {
       this.counter = 0;
-      this.generateCharacters(this.game.characters);
+      this.renderCharacters(this.game.characters);
       this.renderQuote();
       // DOM needs to be cached after handlebars templates are rendered
-      this.cacheDom();
+      this.cacheHandlebars();
       this.bindEvents();       
     },
     checkAnswer: function(originalEvent) {
@@ -46,14 +53,14 @@
     renderQuote: function() {
       var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
       var quote = quoteTemplate(this.game.quotes[this.counter]);
-      $('#game-quotes').html(quote);
+      this.$gameQuotes.html(quote);
     },
-    generateCharacters: function(gameCharacters) {
+    renderCharacters: function(gameCharacters) {
       var image1path = $(`img[alt='${this.game.characters[0].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
       var image2path = $(`img[alt='${this.game.characters[1].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
       var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
       var characters = pictureTemplate(gameCharacters);
-      $('#game-pictures').html(characters);
+      this.$gamePictures.html(characters);
       $('#selected-character-0').attr('src', image1path);
       $('#selected-character-1').attr('src', image2path);
     },
@@ -76,6 +83,7 @@
     }
   }
 
+  gameModule.init();
   module.exports = gameModule
 
 })()
