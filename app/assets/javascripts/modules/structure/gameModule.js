@@ -20,7 +20,6 @@
         counter++;
         if (counter >= 10) {
           // End Game
-          game.completed = true
           postGame();
         } else {
           // Continue Game
@@ -56,14 +55,20 @@
 
       function postGame() {
         console.log(game);
+        var url = "/games/save";
+
+        var game_data = {
+          id: game.id,
+          state: game.state
+        }
 
         $.ajax({
           type: "POST",
           url: url,
-          data: game,
+          data: game_data,
           // why is this object accessible inside function scopeProblem() in the next module?
           success: function(data) {
-            gameModule.createGame(data);
+            alert('hi');
           }
         });
       }
