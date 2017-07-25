@@ -4,7 +4,7 @@
 <script id="game-picture-template" type="text/x-handlebars-template">
   {{#each this}}
     <div class="six columns game-character center">
-      <img id="selected-character-{{@index}}">
+      <img id="selected-character-{{@index}}"><br>
       <button class="game-character-submit" data-id="{{id}}" data-name="{{name}}">{{name}}</button>
     </div>
   {{/each}}
