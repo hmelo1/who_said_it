@@ -42,9 +42,13 @@
       }
 
       function generateCharacters(gameCharacters) {
+        var image1path = $(`img[alt='${game.characters[0].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
+        var image2path = $(`img[alt='${game.characters[1].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
         var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
         var characters = pictureTemplate(gameCharacters);
         $('#game-pictures').html(characters);
+        $('#selected-character-0').attr('src', image1path);
+        $('#selected-character-1').attr('src', image2path);
       }
     }
   }
