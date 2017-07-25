@@ -19,9 +19,9 @@
       function checkGameOver() {
         counter++;
         if (counter >= 10) {
-          debugger
+          postCompletedGame();
         } else {
-          newQuote();
+          renderNewQuote();
         }
       }
       
