@@ -39,7 +39,7 @@
       } 
 
       function checkGameOver() {
-        debugger
+        eval('debugger');
       }
 
       function firstQuote(gameQuote) {
