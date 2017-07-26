@@ -32,7 +32,6 @@
       this.bindEvents();       
     },
     checkAnswer: function(originalEvent) {
-      debugger
       if ($(originalEvent.target).data('id') == this.game.quotes[this.counter].character_id) {
         alert('correct');
         this.game.state.push(true);

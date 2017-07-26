@@ -2,14 +2,14 @@
   position: relative;
   float: left;
   padding-bottom: 25%;
-  width: 25%;
+  width: 23%;
   text-align: center;
-  margin: 50px 0;
+  margin: 50px 1%;
   cursor: pointer;
   .card-front,
   .card-back {
     position: absolute;
-    width: 95%;
+    width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     -webkit-transition: -webkit-transform 0.3s;

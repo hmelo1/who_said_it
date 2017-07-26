@@ -2,13 +2,13 @@
   <div class="card-front">
     <%=image_tag("characters/#{object.img}", :alt => "#{object.name}") %>
     <div class="card-container">
-      <h3 class="name center"><%= object.name %></h3>
+      <h3 class="center"><%= object.name %></h3>
     </div>
   </div>
   <div class="card-back">
     <%=image_tag("characters/#{object.img_selected}", :alt => "#{object.name}") %>
     <div class="card-container">
-      <h3 class="name center"><%= object.name %></h3>
+      <h3 class="center"><%= object.name %></h3>
     </div>
   </div>
   <input type="hidden" name="<%= object.name %>" value="<%= object.id %>" id="<%= object.id %>">
