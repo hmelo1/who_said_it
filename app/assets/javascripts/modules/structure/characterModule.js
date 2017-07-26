@@ -13,8 +13,11 @@
 			this.$characterForm = this.$characterScreen.find('form');
 		},
 	  bindEvents: function() {
+	  	var originalThis = this;
 	    this.$card.on('click', this.selectCards);
-	    this.$characterForm.on('submit', this.postNewGame);
+	    this.$characterForm.on('submit', function(event) {
+	    	originalThis.postNewGame(event);
+	    })
 	  },
 	  selectCards: function(event) {
 	  	if ($('.selected').length < 2) {
@@ -25,11 +28,13 @@
 	  },
 	  postNewGame: function(event) {
 	  	event.preventDefault();
+
+	  	var originalThis = this;
 	    if ($('.selected').length < 2) {
 	      alert('Please select 2 characters');
 	    } else {
 	      var AUTH_TOKEN = $("input[name='authenticity_token']").val();
-	      var url = this.action
+	      var url = event.target.action
 	      var character1 = $('.selected :input')[0];
 	      var character2 = $('.selected :input')[1];
 
@@ -51,6 +56,8 @@
 	        url: url,
 	        data: object,
 	        success: function(data) {
+	        	// Character Screen Fade Out
+	        	// originalThis.$characterScreen.fadeOut();
 	          gameModule.createGame(data);
 	        }
 	      });
