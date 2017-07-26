@@ -1,39 +1,39 @@
 .card {
-  position: relative;
+  cursor: pointer;
   float: left;
+  margin: 5% 1%;
   padding-bottom: 25%;
+  position: relative;
   width: 23%;
   text-align: center;
-  margin: 50px 1%;
-  cursor: pointer;
+
   .card-front,
   .card-back {
-    position: absolute;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 0.3s;
-            transition: transform 0.3s;
+    position: absolute;
+    transition: transform 0.3s;
+    width: 100%;
     img {
-      width: 100%;
       border: 3px solid rgba(228,167,190,0.5);
-      border-bottom: 0px;
+      border-bottom: 0;
       border-radius: 10px 10px 0 0;
+      width: 100%;
     }
     .card-container {
-      width: 100%;
-      margin-top: -5px;
       background-color: $secondary-color;
-      padding: 10px 0 0 0;
       border: 3px solid rgba(228,167,190,0.5);
-      border-top: 0px;
       border-radius: 0 0 10px 10px;
+      border-top: 0;
       box-shadow: 0 6px 8px 0 rgba(0,0,0,0.4);
+      margin-top: -5px;
+      padding-top: 10px;
+      text-shadow: 1px 1px $primary-black;
+      width: 100%;
     }
   }
+
   .card-back {
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
   }
 }
 

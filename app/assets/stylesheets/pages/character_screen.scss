@@ -1,6 +1,13 @@
 // Character Select Page
 
 #character-screen {
+	#cs-title {
+		font-family: $tertiary-font-family;
+		font-weight: normal;
+		margin-top: 5%;
+		margin-bottom: 0px;
+		text-shadow: 1px 1px 5px $primary-grey;
+	}
 	button {
 		width: 100%;
 		margin:3% auto;
