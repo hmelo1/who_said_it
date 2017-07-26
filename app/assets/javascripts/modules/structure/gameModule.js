@@ -5,8 +5,9 @@
       this.cacheDom();
     },
     cacheDom: function() {
-      this.$gameQuotes = $('#game-quotes');
-      this.$gamePictures = $('#game-pictures');
+      this.$gameScreen = $('#game-screen');
+      this.$gameQuotes = this.$gameScreen.find('#game-quotes');
+      this.$gamePictures = this.$gameScreen.find('#game-pictures')
     },
     cacheHandlebars: function() {
       this.$gameCharacterSubmit = $('.game-character-submit');
@@ -26,11 +27,12 @@
       this.counter = 0;
       this.renderCharacters(this.game.characters);
       this.renderQuote();
-      // DOM needs to be cached after handlebars templates are rendered
+      // Items need to be cached after handlebars templates are rendered
       this.cacheHandlebars();
       this.bindEvents();       
     },
     checkAnswer: function(originalEvent) {
+      debugger
       if ($(originalEvent.target).data('id') == this.game.quotes[this.counter].character_id) {
         alert('correct');
         this.game.state.push(true);
