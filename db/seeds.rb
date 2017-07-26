@@ -25,7 +25,7 @@ character_import("donald_trump", "Donald Trump", "45th U.S. President. Eats pizz
 character_import("mr_krabs", "Mr. Krabs", "Avid capitalist and owner of the Krusty Krab. Specializes in labor exploitation.", "mr_krabs.jpg", "mr_krabs_selected.jpg")
 
 # George W. Bush
-character_import("george_w_bush", "George W. Bush", "43rd U.S. President, meme-friendly war criminal and professional shoe dodger.", "george_w_bush.jpg", "george_w_bush_selected.jpg")
+character_import("george_bush", "George Bush", "43rd U.S. President, meme-friendly war criminal and professional shoe dodger.", "george_bush.jpg", "george_bush_selected.jpg")
 
 # George Carlin
 character_import("george_carlin", "George Carlin", "Stand-up Comedian, renowned cynic. Made the bald ponytail fashionable again.", "george_carlin.jpg", "george_carlin_selected.jpg")
