@@ -83,7 +83,7 @@
         data: game_data,
         success: function() {
           // originalThis.$gameScreen.fadeOut();
-          postGameModule.init();
+          postGameModule.passCompletedGame(originalThis.game);
         }
       });
     }

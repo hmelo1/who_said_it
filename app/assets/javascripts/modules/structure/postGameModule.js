@@ -4,8 +4,12 @@
     cacheDom: function() {
       console.log('hi')
     },
-    init: function() {
-      
+    passCompletedGame: function(completedGame) {
+      this.completedGame = completedGame;
+      this.renderPostGame();
+    },
+    renderPostGame: function() {
+    	
     }
   }
   module.exports = postGameModule
