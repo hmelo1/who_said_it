@@ -1,3 +1,4 @@
--Create Flip Cards
--Randomize 10 quotes for each game, either in Ruby or JS
--Create Game Div
+-Create Two Game Cards and Container for Quote
+-Create Post Game Page (Score with loading slider)
+-Stats Page (Most Difficult Matchup, Least Difficult Matchup)
+-Create Navigation (Links: New Game, Global Stats, About)

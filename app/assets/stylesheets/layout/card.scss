@@ -1,4 +1,4 @@
-.card {
+.flipcard {
   cursor: pointer;
   float: left;
   margin: 40px 1%;
@@ -7,8 +7,8 @@
   width: 23%;
   text-align: center;
 
-  .card-front,
-  .card-back {
+  .flipcard-front,
+  .flipcard-back {
     backface-visibility: hidden;
     position: absolute;
     transition: transform 0.3s;
@@ -19,44 +19,44 @@
       border-radius: 10px 10px 0 0;
       width: 100%;
     }
-    .card-container {
+    .flipcard-container {
       background-color: $secondary-color;
-      border: 3px solid rgba(228,167,190,0.5);
+      border: 3px solid rgba(228,167,190,0.2);
       border-radius: 0 0 10px 10px;
       border-top: 0;
       box-shadow: 0 6px 8px 0 rgba(0,0,0,0.4);
-      margin-top: -5px;
+      margin-top: -4px;
       padding-top: 10px;
       text-shadow: 1px 1px $primary-black;
       width: 100%;
     }
   }
 
-  .card-back {
+  .flipcard-back {
     transform: rotateY(-180deg);
   }
 }
 
 // Transform on Selected
 
-.card.selected .card-front {
+.flipcard.selected .flipcard-front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }
 
-.card.selected .card-back {
+.flipcard.selected .flipcard-back {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
 }
 
 // Change Border Color on Selected
 
-.card.selected img {
+.flipcard.selected img {
   border: 3px solid rgba(255,255,255,.9);
   border-bottom: 0px;
 }
 
-.card.selected .card-container {
+.flipcard.selected .flipcard-container {
   border: 3px solid rgba(255,255,255,.9);
   border-top: 0px;
 }

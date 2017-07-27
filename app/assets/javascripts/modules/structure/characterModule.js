@@ -9,17 +9,17 @@
 		},
 		cacheDom: function() {
 	    this.$characterScreen = $('#character-screen');
-	    this.$card = this.$characterScreen.find('.card');
+	    this.$flipcard = this.$characterScreen.find('.flipcard');
 			this.$characterForm = this.$characterScreen.find('form');
 		},
 	  bindEvents: function() {
 	  	var originalThis = this;
-	    this.$card.on('click', this.selectCards);
+	    this.$flipcard.on('click', this.selectFlipCards);
 	    this.$characterForm.on('submit', function(event) {
 	    	originalThis.postNewGame(event);
 	    })
 	  },
-	  selectCards: function(event) {
+	  selectFlipCards: function(event) {
 	  	if ($('.selected').length < 2) {
 				$(this).toggleClass('selected');
 			} else {

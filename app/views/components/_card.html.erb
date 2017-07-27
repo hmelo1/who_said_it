@@ -1,13 +1,13 @@
-<div class="card">
-  <div class="card-front">
+<div class="flipcard">
+  <div class="flipcard-front">
     <%=image_tag("characters/#{object.img}", :alt => "#{object.name}") %>
-    <div class="card-container">
+    <div class="flipcard-container">
       <h3 class="center"><%= object.name %></h3>
     </div>
   </div>
-  <div class="card-back">
+  <div class="flipcard-back">
     <%=image_tag("characters/#{object.img_selected}", :alt => "#{object.name}") %>
-    <div class="card-container">
+    <div class="flipcard-container">
       <h3 class="center"><%= object.name %></h3>
     </div>
   </div>
