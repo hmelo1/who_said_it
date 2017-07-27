@@ -15,10 +15,15 @@ class Game {
 					score++;
 				} 
 			}
-			var calculatedScore = (score * 10 + "%");
-			return calculatedScore;
+			return score;
 		} else {
 			return "Game Incomplete";
+		}
+	}
+
+	percentageScore() {
+		if (this.score()) {
+			return (this.score() * 10 + "%")
 		}
 	}
 

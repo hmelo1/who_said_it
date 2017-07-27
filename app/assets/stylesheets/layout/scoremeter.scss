@@ -1,22 +1,22 @@
 #scoremeter { 
-    height: 40px;
-    border-radius: 5px;
-    position: relative;
-    background: $secondary-color;
-    overflow: hidden;
+  height: 40px;
+  border-radius: 5px;
+  position: relative;
+  background: $secondary-color;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 80%;
 }
 
 #scoremeter span {
-    display: block;
-    height: 100%;
+  display: block;
+  height: 100%;
 }
 
 .progress {
-    background-color: $quaternary-color;
-    -webkit-animation: progressBar 3s ease-in-out;
-    -webkit-animation-fill-mode:both; 
-    -moz-animation: progressBar 3s ease-in-out;
-    -moz-animation-fill-mode:both; 
+  background-color: $quaternary-color;
+  animation: progressBar 2s ease-in-out;
+  animation-fill-mode:both;
 }
 
 @-webkit-keyframes progressBar {
