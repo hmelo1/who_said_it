@@ -8,8 +8,8 @@ class GamesController < ApplicationController
 	end
 
 	def save
-		@game = Game.find(params[:id])
-		@game.update(state: params[:state], completed: true)
+		@game = Game.find(game_params[:id])
+		@game.update(state: game_params[:state], completed: true)
 	end
 
 	def index

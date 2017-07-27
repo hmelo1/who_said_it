@@ -68,6 +68,7 @@
       $('#selected-character-1').attr('src', image2path);
     },
     saveCompletedGame: function() {
+      this.game.completed = true;
       var originalThis = this;
       var url = "/games/save";
 
@@ -81,7 +82,7 @@
         url: url,
         data: game_data,
         success: function() {
-          originalThis.$gameScreen.fadeOut();
+          // originalThis.$gameScreen.fadeOut();
           postGameModule.init();
         }
       });
