@@ -2,13 +2,6 @@
  *= require normalize
  */
 
-@font-face {
-  font-family: 'Milkshake';
-  src: url('Milkshake.otf');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @import 'animations/module';
 @import 'base/module';
 @import 'layout/module';
