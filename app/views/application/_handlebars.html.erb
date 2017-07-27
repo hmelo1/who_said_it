@@ -2,9 +2,9 @@
   {{#each this}}
 		<div class="six columns game-character">
 			<div class="gamecard game-character-submit" data-id="{{id}}" data-name="{{name}}">
-			  <img id="selected-character-{{@index}}">
-			  <div class="gamecard-container center">
-			    <h4>{{name}}</h4> 
+			  <img id="selected-character-{{@index}}" data-id="{{id}}" data-name="{{name}}">
+			  <div class="gamecard-container center" data-id="{{id}}" data-name="{{name}}">
+			    <h4 data-id="{{id}}" data-name="{{name}}">{{name}}</h4> 
 			  </div>
 			</div>
 		</div>

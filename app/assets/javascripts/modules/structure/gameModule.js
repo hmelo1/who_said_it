@@ -1,5 +1,7 @@
 (function() {
 
+  const postGameModule = require('./postGameModule');
+
   var gameModule = {
     init: function() {
       this.cacheDom();
@@ -48,7 +50,7 @@
         this.renderQuote();
       } else {
         // End Game
-        this.postCompletedGame();
+        this.saveCompletedGame();
       }
     },
     renderQuote: function() {
@@ -65,7 +67,8 @@
       $('#selected-character-0').attr('src', image1path);
       $('#selected-character-1').attr('src', image2path);
     },
-    postCompletedGame: function() {
+    saveCompletedGame: function() {
+      var originalThis = this;
       var url = "/games/save";
 
       var game_data = {
@@ -78,7 +81,8 @@
         url: url,
         data: game_data,
         success: function() {
-          alert('working');
+          originalThis.$gameScreen.fadeOut();
+          postGameModule.init();
         }
       });
     }

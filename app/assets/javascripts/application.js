@@ -16,3 +16,4 @@ require('./modules/components/navModule');
 require('./modules/structure/welcomeModule');
 require('./modules/structure/characterModule');
 require('./modules/structure/gameModule');
+require('./modules/structure/postGameModule');
