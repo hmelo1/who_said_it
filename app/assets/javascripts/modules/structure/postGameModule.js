@@ -5,7 +5,7 @@
       console.log('hi')
     },
     init: function() {
-      debugger
+      
     }
   }
   module.exports = postGameModule

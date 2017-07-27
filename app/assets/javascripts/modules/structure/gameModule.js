@@ -34,7 +34,7 @@
       this.bindEvents();       
     },
     checkAnswer: function(originalEvent) {
-      if ($(originalEvent.target).data('id') == this.game.quotes[this.counter].character_id) {
+      if ($(originalEvent.target).parents('.gamecard').data('id') == this.game.quotes[this.counter].character_id) {
         alert('correct');
         this.game.state.push(true);
       } else {
