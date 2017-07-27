@@ -1,3 +1,4 @@
+-Prevent Text From Moving Page
 -Create Two Game Cards and Container for Quote
 -Create Post Game Page (Score with loading slider)
 -Stats Page (Most Difficult Matchup, Least Difficult Matchup)

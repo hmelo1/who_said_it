@@ -1,11 +1,7 @@
 #game-screen {
-  img {
-    max-width: 500px;
-    width: 100%;
-  }
   #game-quotes {
     p {
-      font-size: 4rem;
+      font-size: 3.5rem;
       @media (max-width: 1200px) {
         font-size: 3rem;
       }
