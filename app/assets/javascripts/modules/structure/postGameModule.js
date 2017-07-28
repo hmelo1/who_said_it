@@ -19,6 +19,7 @@
     	
     	this.$scoreField.text(score + "/10");
     	this.$staticSpan.css('width', percentageScore);
+      $('#game-quotes').fadeOut();
       this.$postGameScreen.fadeIn();
     	this.$animateSpan.addClass('progress');
     }

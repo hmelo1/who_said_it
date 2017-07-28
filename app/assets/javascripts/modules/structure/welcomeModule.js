@@ -15,7 +15,7 @@
 	    this.$playButton.on('click', this.swapWelcome.bind(this));
 	  },
 	  onLoad: function() {
-	  	// this.$characterScreen.hide().removeClass('.hide');
+	  	this.$characterScreen.hide().removeClass('.hide');
 	  },
 	  swapWelcome: function() {
 	    this.$welcomeScreen.fadeOut();

@@ -57,7 +57,7 @@
 	        data: object,
 	        success: function(data) {
 	        	// Character Screen Fade Out
-	        	// originalThis.$characterScreen.fadeOut();
+	        	originalThis.$characterScreen.fadeOut();
 	          gameModule.createGame(data);
 	        }
 	      });
