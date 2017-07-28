@@ -9,7 +9,7 @@ def character_import(filename, name, description, img, img_selected)
 	json = ActiveSupport::JSON.decode(File.read("db/seeds/quotes/#{filename}.json"))
 	json.each do |key, value|
 	  value.each do |quote|
-	  	Quote.create(content: quote["content"], source: quote["source"], tag: quote["tag"], character_id: character.id)
+	  	Quote.create(content: quote["content"], source: quote["source"], character_id: character.id)
 	  end
 	end
 end

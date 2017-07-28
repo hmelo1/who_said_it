@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20170721210500) do
   create_table "quotes", force: :cascade do |t|
     t.string "content"
     t.string "source"
-    t.string "tag"
     t.integer "character_id"
     t.string "character_name"
     t.datetime "created_at", null: false

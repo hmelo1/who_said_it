@@ -1,8 +1,7 @@
 class Quote < ApplicationRecord
 	belongs_to :character
-	validates :content, :tag, :source, :character_id, presence: true
+	validates :content, :source, :character_id, presence: true
 	after_save :save_character_name
-
 
 	def save_character_name
     if character_name == nil
