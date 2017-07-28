@@ -15,17 +15,3 @@
     margin-top: -3px;
   }
 }
-
-.gamecard.incorrect {
-  border: 5px solid $incorrect-color;
-  .gamecard-container {
-    background: $incorrect-color;
-  }
-}
-
-.gamecard.correct {
-  border: 5px solid $correct-color;
-  .gamecard-container {
-    background: $correct-color;
-  }
-}

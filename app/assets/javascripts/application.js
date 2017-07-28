@@ -11,6 +11,7 @@
 
 // Components
 require('./modules/components/navModule');
+require('./modules/components/modal');
 
 // Modules
 require('./modules/structure/welcomeModule');
