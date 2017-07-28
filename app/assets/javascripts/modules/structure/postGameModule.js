@@ -2,6 +2,7 @@
 
   var postGameModule = {
     cacheDom: function() {
+      this.$gameQuotes = $('#game-quotes')
     	this.$postGameScreen = $('#postgame-screen');
       this.$scoreMeter = this.$postGameScreen.find('#scoremeter');
       this.$staticSpan = this.$scoreMeter.find('#static-span');
@@ -16,12 +17,16 @@
     renderPostGame: function() {
     	var percentageScore = this.completedGame.percentageScore();
     	var score = this.completedGame.score();
-
-    	this.$scoreField.text(score + "/10");
+    	this.$scoreField.text("Score: " + score + "/10");
     	this.$staticSpan.css('width', percentageScore);
-      $('#game-quotes').addClass('hide').hide();
+      // Hide game quotes and show post game screen
+      this.togglePostGame();
+    },
+    togglePostGame: function() {
+      this.$gameQuotes.hide();
       this.$postGameScreen.fadeIn();
-    	this.$animateSpan.addClass('progress');
+      // This class animates the scoremeter
+      this.$animateSpan.addClass('progress');
     }
   }
   module.exports = postGameModule
