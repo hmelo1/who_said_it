@@ -16,10 +16,10 @@
     renderPostGame: function() {
     	var percentageScore = this.completedGame.percentageScore();
     	var score = this.completedGame.score();
-    	
+
     	this.$scoreField.text(score + "/10");
     	this.$staticSpan.css('width', percentageScore);
-      $('#game-quotes').fadeOut();
+      $('#game-quotes').addClass('hide').hide();
       this.$postGameScreen.fadeIn();
     	this.$animateSpan.addClass('progress');
     }
