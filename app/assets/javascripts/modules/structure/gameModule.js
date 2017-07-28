@@ -12,11 +12,11 @@
       this.$gamePictures = this.$gameScreen.find('#game-pictures')
     },
     cacheHandlebars: function() {
-      this.$gameCharacterSubmit = $('.game-character-submit');
+      this.$gameCard = $('.gamecard');
     },
     bindEvents: function() {
       var originalThis = this;
-      this.$gameCharacterSubmit.on("click", function(event) {
+      this.$gameCard.on("click", function(event) {
         originalThis.checkAnswer(event);
         originalThis.checkComplete();
       });

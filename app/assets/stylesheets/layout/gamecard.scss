@@ -4,13 +4,28 @@
 	margin-bottom: 40px;
 	max-width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
  	img {
- 		border-radius: 5px 5px 0 0;
+ 		border-radius: 10px 10px 0 0;
     max-width: 500px;
     width: 100%;
   }
   .gamecard-container {
-  	border-radius: 0 0 10px 10px;
-    padding: 5px 0;
+    padding: 10px 0;
+    margin-top: -3px;
+  }
+}
+
+.gamecard.incorrect {
+  border: 5px solid $incorrect-color;
+  .gamecard-container {
+    background: $incorrect-color;
+  }
+}
+
+.gamecard.correct {
+  border: 5px solid $correct-color;
+  .gamecard-container {
+    background: $correct-color;
   }
 }
