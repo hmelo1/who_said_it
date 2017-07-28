@@ -22,8 +22,10 @@ class Game {
 	}
 
 	percentageScore() {
-		if (this.score()) {
+		if (this.score() >= 0) {
 			return (this.score() * 10 + "%")
+		} else {
+			return "Game Incomplete"
 		}
 	}
 

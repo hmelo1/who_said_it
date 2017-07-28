@@ -82,7 +82,7 @@
         url: url,
         data: game_data,
         success: function() {
-          // originalThis.$gameScreen.fadeOut();
+          originalThis.$gameQuotes.fadeOut();
           postGameModule.passCompletedGame(originalThis.game);
         }
       });
