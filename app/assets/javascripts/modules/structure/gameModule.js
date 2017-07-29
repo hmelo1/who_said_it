@@ -7,9 +7,12 @@
       this.cacheDom();
     },
     cacheDom: function() {
+      // Game Screen Assignments
       this.$gameScreen = $('#game-screen');
       this.$gameQuotes = this.$gameScreen.find('#game-quotes');
       this.$gamePictures = this.$gameScreen.find('#game-pictures');
+      this.$gameCounter = this.$gameScreen.find('#game-counter');
+      // Modal Assignments
       this.$modal = $('.modal');
       this.$modalEvaluate = this.$modal.find('#evaluate');
       this.$modalCorrectAnswer = this.$modal.find('#correct-answer');
@@ -76,6 +79,8 @@
       var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
       var quote = quoteTemplate(this.game.quotes[this.counter]);
       this.$gameQuotes.html(quote);
+      // Updated Quote Counter
+      this.$gameCounter.find('p').text((this.counter + 1).toString() + "/10");
     },
     renderCharacters: function(gameCharacters) {
       // Get the URL of fingerprinted asset on users computer (Regex removes Base URL)

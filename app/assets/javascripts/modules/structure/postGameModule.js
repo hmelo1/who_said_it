@@ -2,9 +2,12 @@
 
   var postGameModule = {
     cacheDom: function() {
-      this.$gameQuotes = $('#game-quotes')
+      // Variable Assignments
+      this.$gameQuotes = $('#game-quotes');
+      this.$gameCounter = $('#game-counter');
     	this.$postGameScreen = $('#postgame-screen');
       this.$scoreMeter = this.$postGameScreen.find('#scoremeter');
+      // Scoremeter Variables
       this.$staticSpan = this.$scoreMeter.find('#static-span');
       this.$animateSpan = this.$scoreMeter.find('#animate-span');
       this.$scoreField = this.$postGameScreen.find('#score');
@@ -15,6 +18,7 @@
       this.renderPostGame();
     },
     renderPostGame: function() {
+      // Make Span Width of Scoremeter Equal to percentageScore
     	var percentageScore = this.completedGame.percentageScore();
     	var score = this.completedGame.score();
     	this.$scoreField.text("Score: " + score + "/10");
@@ -23,9 +27,13 @@
       this.togglePostGame();
     },
     togglePostGame: function() {
+      // Hide Game Quotes Div
       this.$gameQuotes.hide();
+      // Hide Game counter
+      this.$gameCounter.hide();
+      // Show Post Game Screen
       this.$postGameScreen.fadeIn();
-      // This class animates the scoremeter
+      // Animate the Scoremeter
       this.$animateSpan.addClass('progress');
     }
   }

@@ -8,6 +8,7 @@
 	    this.bindEvents();
 		},
 		cacheDom: function() {
+			// Character Screen Assignments
 	    this.$characterScreen = $('#character-screen');
 	    this.$flipcard = this.$characterScreen.find('.flipcard');
 			this.$characterForm = this.$characterScreen.find('form');
@@ -32,6 +33,7 @@
 	  	var originalThis = this;
 	    if ($('.selected').length < 2) {
 	      alert('Please select 2 characters');
+				return;
 	    } else {
 	      var AUTH_TOKEN = $("input[name='authenticity_token']").val();
 	      var url = event.target.action
