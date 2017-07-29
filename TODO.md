@@ -1,4 +1,2 @@
--Create Two Game Cards and Container for Quote (3/5)
--Create Post Game Page (Score with loading slider)
 -Stats Page (Most Difficult Matchup, Least Difficult Matchup)
 -Create Navigation (Links: New Game, Global Stats, About)
