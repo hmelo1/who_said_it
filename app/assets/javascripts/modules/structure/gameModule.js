@@ -7,12 +7,12 @@
       this.cacheDom();
     },
     cacheDom: function() {
-      // Game Screen Assignments
+      // Game Screen
       this.$gameScreen = $('#game-screen');
       this.$gameQuotes = this.$gameScreen.find('#game-quotes');
       this.$gamePictures = this.$gameScreen.find('#game-pictures');
       this.$gameCounter = this.$gameScreen.find('#game-counter');
-      // Modal Assignments
+      // Modal
       this.$modal = $('.modal');
       this.$modalEvaluate = this.$modal.find('#evaluate');
       this.$modalCorrectAnswer = this.$modal.find('#correct-answer');

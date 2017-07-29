@@ -8,14 +8,14 @@
 	    this.bindEvents();
 		},
 		cacheDom: function() {
-			// Character Screen Assignments
+			// Character Screen
 	    this.$characterScreen = $('#character-screen');
-	    this.$flipcard = this.$characterScreen.find('.flipcard');
+	    this.$flipcards = this.$characterScreen.find('.flipcard');
 			this.$characterForm = this.$characterScreen.find('form');
 		},
 	  bindEvents: function() {
 	  	var originalThis = this;
-	    this.$flipcard.on('click', this.selectFlipCards);
+	    this.$flipcards.on('click', this.selectFlipCards);
 	    this.$characterForm.on('submit', function(event) {
 	    	originalThis.postNewGame(event);
 	    })
@@ -60,6 +60,7 @@
 	        success: function(data) {
 	        	// Character Screen Fade Out
 	        	originalThis.$characterScreen.fadeOut();
+						// Pass Game to Game Module
 	          gameModule.createGame(data);
 	        }
 	      });
