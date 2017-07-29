@@ -9,16 +9,19 @@
     cacheDom: function() {
       this.$gameScreen = $('#game-screen');
       this.$gameQuotes = this.$gameScreen.find('#game-quotes');
-      this.$gamePictures = this.$gameScreen.find('#game-pictures')
+      this.$gamePictures = this.$gameScreen.find('#game-pictures');
+      this.$modal = $('.modal');
+      this.$modalEvaluate = this.$modal.find('#evaluate');
+      this.$modalCorrectAnswer = this.$modal.find('#correct-answer');
+      this.$modalUserAnswer = this.$modal.find('#user-answer');
     },
     cacheHandlebars: function() {
       this.$gameCard = $('.gamecard');
     },
     bindEvents: function() {
       var originalThis = this;
-      this.$gameCard.on("click", function(event) {
+      this.$gameCard.on('click', function(event) {
         originalThis.checkAnswer(event);
-        originalThis.checkComplete();
       });
     },
     createGame: function(data) {
@@ -31,21 +34,29 @@
       this.renderQuote();
       // Items need to be cached after handlebars templates are rendered
       this.cacheHandlebars();
-      this.bindEvents();       
+      this.bindEvents();
+      this.bindModalEvents();
     },
     checkAnswer: function(originalEvent) {
-      if ($(originalEvent.target).parents('.gamecard').data('id') == this.game.quotes[this.counter].character_id) {
-        alert('correct');
+      var clickedCardId = $(originalEvent.target).parents('.gamecard').data('id');
+      var clickedCardName = $(originalEvent.target).parents('.gamecard').data('name');
+      var answerCharacterId = this.game.quotes[this.counter].character_id;
+      var answerCharacterName = this.game.quotes[this.counter].character_name;
+
+      if (clickedCardId == answerCharacterId) {
+        // Correct Answer
+        this.showModal('Correct!', answerCharacterName, clickedCardName);
         this.game.state.push(true);
       } else {
-        alert('incorrect');
+        // Incorrect Answer
+        this.showModal('Wrong!', answerCharacterName, clickedCardName);
         this.game.state.push(false);
       }
     },
     checkComplete: function() {
       this.counter++;
 
-      if (this.counter < 10) {    
+      if (this.counter < 10) {
         // Continue Game
         this.renderQuote();
       } else {
@@ -85,6 +96,22 @@
           postGameModule.passCompletedGame(originalThis.game);
         }
       });
+    },
+    bindModalEvents: function() {
+      this.$modal.on('click', this.hideModal.bind(this))
+    },
+    showModal: function(evaluate, correctAnswer, userAnswer) {
+      var originalThis = this;
+      this.$modalEvaluate.text(evaluate);
+      this.$modalCorrectAnswer.text("Correct Answer: " + correctAnswer);
+      this.$modalUserAnswer.text("Your Answer:  " + userAnswer);
+
+      this.$modal.css('display', 'block');
+    },
+    hideModal: function() {
+      this.$modal.fadeOut();
+      // Check if Game is Complete and/or Render New Quote After Modal Disappears
+      this.checkComplete();
     }
   }
 
