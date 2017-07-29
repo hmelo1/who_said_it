@@ -17,6 +17,9 @@
 			// On Click, Hide Welcome Screen and Show Character Screen
 	    this.$playButton.on('click', this.swapWelcome.bind(this));
 	  },
+	  unbindEvents: function() {
+	  	this.$playButton.unbind();
+	  },
 	  onLoad: function() {
 	  	this.$characterScreen.hide().removeClass('hide');
 	  },
@@ -24,6 +27,8 @@
 			// Hide Welcome Screen and Show Character Screen
 	    this.$welcomeScreen.fadeOut();
 	    this.$characterScreen.delay(400).fadeIn(300);
+	    // Unbind all events to avoid memory leaks
+	    this.unbindEvents();
 	  }
 	}
 	welcomeModule.init();

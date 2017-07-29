@@ -1,6 +1,10 @@
 (function() {
 
   var postGameModule = {
+    init: function() {
+      this.cacheDom();
+      this.bindEvents();
+    },
     cacheDom: function() {
       // Character Screen
 	    this.$characterScreen = $('#character-screen');
@@ -40,15 +44,13 @@
     },
     togglePostGame: function() {
       // Empty Game Counter
-      this.$gameCounter.find('p').empty();
+      this.$gameCounter.find('h6').empty();
       // Hide Game Quotes Div
       this.$gameQuotes.empty();
       // Show Post Game Screen
       this.$postGameScreen.removeClass('hide').fadeIn();
       // Animate the Scoremeter
       this.$animateSpan.addClass('progress');
-      // Bind Click Events
-      this.bindEvents();
     },
     restartGame: function () {
       // Removed Selected Cards
@@ -61,6 +63,7 @@
       this.$characterScreen.fadeIn(300);
     }
   }
+  postGameModule.init();
   module.exports = postGameModule
 
 })()

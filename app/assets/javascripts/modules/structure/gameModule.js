@@ -25,6 +25,7 @@
       this.$gameCard.on('click', function(event) {
         originalThis.checkAnswer(event);
       });
+      // Important Event -- Check Complete Function Runs Here
       this.$modal.on('click', this.hideModal.bind(this))
     },
     unbindEvents: function() {
@@ -83,7 +84,7 @@
       var quote = quoteTemplate(this.game.quotes[this.counter]);
       this.$gameQuotes.html(quote);
       // Updated Quote Counter
-      this.$gameCounter.find('p').text((this.counter + 1).toString() + "/10");
+      this.$gameCounter.find('h6').text((this.counter + 1).toString() + "/10");
     },
     renderCharacters: function(gameCharacters) {
       // Get the URL of fingerprinted asset on users computer (Regex removes Base URL)
