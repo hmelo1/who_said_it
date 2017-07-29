@@ -5,6 +5,12 @@
 	max-width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
+	transition: all .2s ease-in-out;
+	&:hover {
+    /* On mouse-over, add a deeper shadow */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transform: scale(1.02);
+  }
  	img {
  		border-radius: 10px 10px 0 0;
     max-width: 500px;
