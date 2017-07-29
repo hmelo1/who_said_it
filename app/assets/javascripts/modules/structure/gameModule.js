@@ -13,7 +13,6 @@
       this.$modal = $('.modal');
       this.$modalEvaluate = this.$modal.find('#evaluate');
       this.$modalCorrectAnswer = this.$modal.find('#correct-answer');
-      this.$modalUserAnswer = this.$modal.find('#user-answer');
     },
     cacheHandlebars: function() {
       this.$gameCard = $('.gamecard');
@@ -52,11 +51,11 @@
 
       if (clickedCardId == answerCharacterId) {
         // Correct Answer
-        this.showModal('Correct!', answerCharacterName, clickedCardName);
+        this.showModal('Correct!', answerCharacterName);
         this.game.state.push(true);
       } else {
         // Incorrect Answer
-        this.showModal('Wrong!', answerCharacterName, clickedCardName);
+        this.showModal('Wrong!', answerCharacterName);
         this.game.state.push(false);
       }
     },
@@ -121,13 +120,11 @@
       // Click Anywhere On Screen To Close Modal
       this.$modal.on('click', this.hideModal.bind(this))
     },
-    showModal: function(evaluate, correctAnswer, userAnswer) {
+    showModal: function(evaluate, correctAnswer) {
       // Pass in 'Correct/Incorrect' into Modal Before Displaying It
       this.$modalEvaluate.text(evaluate);
       // Pass in Correct Answer into Modal Before Displaying It
       this.$modalCorrectAnswer.text("Correct Answer: " + correctAnswer);
-      // Pass in User Answer into Modal Before Displaying It
-      this.$modalUserAnswer.text("Your Answer:  " + userAnswer);
       // Display Modal
       this.$modal.css('display', 'block');
     },
