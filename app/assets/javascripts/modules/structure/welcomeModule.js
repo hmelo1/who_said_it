@@ -18,8 +18,7 @@
 	    this.$playButton.on('click', this.swapWelcome.bind(this));
 	  },
 	  onLoad: function() {
-			// Hide Character Screen on Load
-	  	// this.$characterScreen.hide().removeClass('.hide');
+	  	this.$characterScreen.hide().removeClass('hide');
 	  },
 	  swapWelcome: function() {
 			// Hide Welcome Screen and Show Character Screen

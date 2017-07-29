@@ -6,10 +6,12 @@
 	    this.$characterScreen = $('#character-screen');
       // Game Screen
       this.$gameScreen = $('#game-screen');
-      // Game Quotes
-      this.$gameQuotes = $('#game-quotes');
+      // Game Pictures
+      this.gamePictures = this.$gameScreen.find('#game-pictures');
       // Game Counter
-      this.$gameCounter = $('#game-counter');
+      this.$gameCounter = this.$gameScreen.find('#game-counter');
+      // Game Quotes
+      this.$gameQuotes = this.$gameScreen.find('#game-quotes')
       // Post Game Screen
     	this.$postGameScreen = $('#postgame-screen');
       this.$playAgain = this.$postGameScreen.find('button');
@@ -37,23 +39,26 @@
       this.togglePostGame();
     },
     togglePostGame: function() {
-      // Hide Game counter
-      this.$gameCounter.hide();
+      // Empty Game Counter
+      this.$gameCounter.find('p').empty();
       // Hide Game Quotes Div
-      this.$gameQuotes.hide();
+      this.$gameQuotes.empty();
       // Show Post Game Screen
-      this.$postGameScreen.fadeIn();
+      this.$postGameScreen.removeClass('hide').fadeIn();
       // Animate the Scoremeter
       this.$animateSpan.addClass('progress');
       // Bind Click Events
       this.bindEvents();
     },
     restartGame: function () {
-      this.$postGameScreen.fadeOut();
-      this.$animateSpan.removeClass('progress');
       // Removed Selected Cards
       $('.selected').removeClass('selected');
-      // Start Here
+      // Hide Post Game Screen
+      this.$postGameScreen.addClass('hide').fadeOut();
+      this.$animateSpan.removeClass('progress');
+      // Empty Game Pictures
+      this.gamePictures.empty();
+      this.$characterScreen.fadeIn(300);
     }
   }
   module.exports = postGameModule

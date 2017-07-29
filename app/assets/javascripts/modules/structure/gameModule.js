@@ -25,6 +25,11 @@
       this.$gameCard.on('click', function(event) {
         originalThis.checkAnswer(event);
       });
+      this.$modal.on('click', this.hideModal.bind(this))
+    },
+    unbindEvents: function() {
+      this.$gameCard.unbind();
+      this.$modal.unbind();
     },
     createGame: function(data) {
       this.game = new Game(data);
@@ -32,7 +37,7 @@
     },
     playGame: function() {
       // Game Functions
-
+    
       // Start Counter at 0
       this.counter = 0;
       // Render Characters and First Quote
@@ -42,8 +47,6 @@
       this.cacheHandlebars();
       // New Quotes Render onClick of GameCards
       this.bindEvents();
-      // One Bind Event for Modal Close (and check if game is completed)
-      this.bindModalEvents();
     },
     checkAnswer: function(originalEvent) {
       // Variables to Check Character ID/NAME of Clicked Card and Character Who Said Quote
@@ -117,14 +120,11 @@
         data: game_data,
         success: function() {
           postGameModule.passCompletedGame(originalThis.game);
+          originalThis.unbindEvents();
         }
       });
     },
     // Modal Functions
-    bindModalEvents: function() {
-      // Click Anywhere On Screen To Close Modal
-      this.$modal.on('click', this.hideModal.bind(this))
-    },
     showModal: function(evaluate, correctAnswer) {
       // Pass in 'Correct/Incorrect' into Modal Before Displaying It
       this.$modalEvaluate.text(evaluate);
