@@ -39,14 +39,14 @@ character_import("hitler", "Adolf Hitler", "Leader of the Nazi Party, mass-murde
 # King Joffrey
 character_import("mr_burns", "Mr. Burns", "Nuclear Power Plant Owner, trap door activator and ruthless businessman.", "mr_burns.jpg", "mr_burns_selected.jpg")
 
-# Mr. Burns
-character_import("king_joffrey", "King Joffrey", "Heir to King Baratheon, egomaniacal snowflake and Caligula wannabe.", "king_joffrey.jpg", "king_joffrey_selected.jpg",)
+# Henry Kissinger
+character_import("henry_kissinger", "Henry Kissinger", "56th Secretary of State, Committed Genocide with a Swagger", "henry_kissinger.jpg", "henry_kissinger_selected.jpg",)
 
-# Skeletor
-character_import("skeletor", "Skeletor", "Muscular blue humanoid and aspiring master of the universe.", "skeletor.jpg", "skeletor_selected.jpg")
+# Noam Chomsky
+character_import("noam_chomsky", "Noam Chomsky", "Social-critic, World Renowned Intellectual", "noam_chomsky.jpg", "noam_chomsky_selected.jpg")
 
 # Stalin
 character_import("joseph_stalin", "Joseph Stalin", "Ex-Soviet Leader and prize-winning political repressor.", "stalin.jpg", "stalin_selected.jpg")
 
 # Stewie
-character_import("stewie", "Stewie Griffin", "Deranged matricidal infant with a cuddly side.", "stewie.jpg", "stewie_selected.jpg")
+character_import("stewie_griffin", "Stewie Griffin", "Deranged matricidal infant with a cuddly side.", "stewie_griffin.jpg", "stewie_griffin_selected.jpg")
