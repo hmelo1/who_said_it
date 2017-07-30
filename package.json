@@ -1,5 +1,6 @@
 {
   "name": "who_said_it",
+  "version": "0.1.0",
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0",
