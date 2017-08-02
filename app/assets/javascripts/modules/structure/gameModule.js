@@ -38,7 +38,7 @@
     },
     playGame: function() {
       // Game Functions
-    
+
       // Start Counter at 0
       this.counter = 0;
       // Render Characters and First Quote
@@ -79,12 +79,12 @@
       }
     },
     renderQuote: function() {
+      // Render Quote Counter
+      this.$gameCounter.find('h6').text("Question: " + (this.counter + 1).toString() + "/10");
       // Render Handlebars Quote Template
       var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
       var quote = quoteTemplate(this.game.quotes[this.counter]);
       this.$gameQuotes.html(quote);
-      // Updated Quote Counter
-      this.$gameCounter.find('h6').text((this.counter + 1).toString() + "/10");
     },
     renderCharacters: function(gameCharacters) {
       // Get the URL of fingerprinted asset on users computer (Regex removes Base URL)
