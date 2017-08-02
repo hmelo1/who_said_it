@@ -80,7 +80,7 @@
     },
     renderQuote: function() {
       // Render Quote Counter
-      this.$gameCounter.find('h6').text("Question: " + (this.counter + 1).toString() + "/10");
+      this.$gameCounter.find('h6').text("Quote: " + (this.counter + 1).toString() + "/10");
       // Render Handlebars Quote Template
       var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
       var quote = quoteTemplate(this.game.quotes[this.counter]);
