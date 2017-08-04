@@ -12,8 +12,6 @@
       this.$gameScreen = $('#game-screen');
       // Game Pictures
       this.gamePictures = this.$gameScreen.find('#game-pictures');
-      // Game Counter
-      this.$gameCounter = this.$gameScreen.find('#game-counter');
       // Game Quotes
       this.$gameQuotes = this.$gameScreen.find('#game-quotes')
       // Post Game Screen
@@ -43,8 +41,6 @@
       this.togglePostGame();
     },
     togglePostGame: function() {
-      // Empty Game Counter
-      this.$gameCounter.find('h6').empty();
       // Hide Game Quotes Div
       this.$gameQuotes.empty();
       // Show Post Game Screen

@@ -11,7 +11,6 @@
       this.$gameScreen = $('#game-screen');
       this.$gameQuotes = this.$gameScreen.find('#game-quotes');
       this.$gamePictures = this.$gameScreen.find('#game-pictures');
-      this.$gameCounter = this.$gameScreen.find('#game-counter');
       // Modal
       this.$gameModal = $('.gamemodal');
       this.$gameModalEvaluate = this.$gameModal.find('#evaluate');
@@ -80,8 +79,11 @@
       }
     },
     renderQuote: function() {
-      // Render Quote Counter
-      this.$gameCounter.find('h6').text("Quote " + (this.counter + 1).toString() + "/10");
+      var originalThis = this;
+      // Register Helper for Counter
+      Handlebars.registerHelper("counter", function () {
+        return originalThis.counter + 1;
+      })
       // Render Handlebars Quote Template
       var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
       var quote = quoteTemplate(this.game.quotes[this.counter]);
