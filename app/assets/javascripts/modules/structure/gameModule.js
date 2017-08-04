@@ -13,9 +13,10 @@
       this.$gamePictures = this.$gameScreen.find('#game-pictures');
       this.$gameCounter = this.$gameScreen.find('#game-counter');
       // Modal
-      this.$modal = $('.modal');
-      this.$modalEvaluate = this.$modal.find('#evaluate');
-      this.$modalCorrectAnswer = this.$modal.find('#correct-answer');
+      this.$gameModal = $('.gamemodal');
+      this.$gameModalEvaluate = this.$gameModal.find('#evaluate');
+      this.$gameModalCorrectAnswer = this.$gameModal.find('#correct-answer');
+      this.$rightArrow = this.$gameModal.find('#right-arrow')
     },
     cacheHandlebars: function() {
       this.$gameCard = $('.gamecard');
@@ -26,11 +27,11 @@
         originalThis.checkAnswer(event);
       });
       // Important Event -- Check Complete Function Runs Here
-      this.$modal.on('click', this.hideModal.bind(this))
+      this.$rightArrow.on('click', this.hideGameModal.bind(this))
     },
     unbindEvents: function() {
       this.$gameCard.unbind();
-      this.$modal.unbind();
+      this.$rightArrow.unbind();
     },
     createGame: function(data) {
       this.game = new Game(data);
@@ -58,11 +59,11 @@
 
       if (clickedCardId == answerCharacterId) {
         // Correct Answer
-        this.showModal('Correct!', answerCharacterName);
+        this.showGameModal('Correct!', answerCharacterName);
         this.game.state.push(true);
       } else {
         // Incorrect Answer
-        this.showModal('Wrong!', answerCharacterName);
+        this.showGameModal('Wrong!', answerCharacterName);
         this.game.state.push(false);
       }
     },
@@ -80,7 +81,7 @@
     },
     renderQuote: function() {
       // Render Quote Counter
-      this.$gameCounter.find('h6').text("Quote: " + (this.counter + 1).toString() + "/10");
+      this.$gameCounter.find('h6').text("Quote " + (this.counter + 1).toString() + "/10");
       // Render Handlebars Quote Template
       var quoteTemplate = Handlebars.compile($('#game-quote-template').html());
       var quote = quoteTemplate(this.game.quotes[this.counter]);
@@ -125,17 +126,17 @@
         }
       });
     },
-    // Modal Functions
-    showModal: function(evaluate, correctAnswer) {
+    // Game Modal Functions
+    showGameModal: function(evaluate, correctAnswer) {
       // Pass in 'Correct/Incorrect' into Modal Before Displaying It
-      this.$modalEvaluate.text(evaluate);
+      this.$gameModalEvaluate.text(evaluate);
       // Pass in Correct Answer into Modal Before Displaying It
-      this.$modalCorrectAnswer.text("Correct Answer: " + correctAnswer);
+      this.$gameModalCorrectAnswer.text("Correct Answer: " + correctAnswer);
       // Display Modal
-      this.$modal.css('display', 'block');
+      this.$gameModal.css('display', 'block');
     },
-    hideModal: function() {
-      this.$modal.fadeOut();
+    hideGameModal: function() {
+      this.$gameModal.fadeOut();
       // Check if Game is Complete and/or Render New Quote After Modal Disappears
       this.checkComplete();
     }

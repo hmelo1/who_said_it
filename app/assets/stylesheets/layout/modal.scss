@@ -1,5 +1,4 @@
-.modal {
-  cursor: pointer;
+.gamemodal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -14,17 +13,21 @@
 }
 
 /* Modal Content */
-.modal-content {
+.gamemodal-content {
   color: $primary-white;
   position: relative;
   background-color: $secondary-color;
   margin: auto;
   border-radius: 10px;
   width: 40%;
-  padding: 50px 0;
+  padding: 30px 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.6s
+}
+
+#right-arrow {
+  cursor: pointer;
 }
 
 /* Add Animation */
