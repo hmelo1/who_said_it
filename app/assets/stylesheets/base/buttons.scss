@@ -9,6 +9,7 @@ button {
   padding: 15px 25px;
   font-family: $primary-font-family;
   font-size: 2.5em;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
@@ -16,7 +17,7 @@ button {
   white-space: nowrap;
   outline: none;
   @media (min-width: 550px) {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   &:hover  {

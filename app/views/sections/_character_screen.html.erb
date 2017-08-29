@@ -1,8 +1,6 @@
 <div id="character-screen" class="hide">
 	<%= form_tag(create_game_path, method: 'post', id: 'create-game') do %>
-	  <div class="row">
-	     <h1 class="center">Select Two Characters</h1>
-	  </div>
+		<h1 class="center">Select Two Characters</h1>
 	  <% @characters.each_slice(4) do |slice| %>
 		  <div class="row">
 		    <% slice.each do |character| %>

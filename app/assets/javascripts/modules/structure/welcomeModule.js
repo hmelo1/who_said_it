@@ -26,7 +26,7 @@
 	  swapWelcome: function() {
 			// Hide Welcome Screen and Show Character Screen
 	    this.$welcomeScreen.hide();
-	    this.$characterScreen.fadeIn(300);
+	    this.$characterScreen.fadeIn();
 	    // Unbind all events to avoid memory leaks
 	    this.unbindEvents();
 	  }
