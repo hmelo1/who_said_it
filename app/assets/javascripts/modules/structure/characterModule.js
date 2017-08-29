@@ -59,7 +59,7 @@
 	        data: object,
 	        success: function(data) {
 	        	// Character Screen Fade Out
-	        	originalThis.$characterScreen.fadeOut();
+	        	originalThis.$characterScreen.hide();
 						// Pass Game to Game Module
 	          gameModule.createGame(data);
 	        }
