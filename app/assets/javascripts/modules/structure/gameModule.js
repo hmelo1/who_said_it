@@ -138,7 +138,7 @@
       this.$gameModal.css('display', 'block');
     },
     hideGameModal: function() {
-      this.$gameModal.fadeOut();
+      this.$gameModal.hide();
       // Check if Game is Complete and/or Render New Quote After Modal Disappears
       this.checkComplete();
     }
