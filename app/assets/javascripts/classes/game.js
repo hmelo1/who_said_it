@@ -1,4 +1,5 @@
 class Game {
+
 	constructor(attributes) {
 	  this.id = attributes.id;
 	  this.characters = attributes.characters;
@@ -23,9 +24,9 @@ class Game {
 
 	percentageScore() {
 		if (this.score() >= 0) {
-			return (this.score() * 10 + "%")
+			return (this.score() * 10 + "%");
 		} else {
-			return "Game Incomplete"
+			return "Game Incomplete";
 		}
 	}
 
