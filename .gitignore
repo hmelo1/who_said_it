@@ -7,9 +7,8 @@
 # Ignore bundler config.
 /.bundle
 
-# Ignore public & vendor folder
+# Ignore public folder
 /public
-/vendor
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
