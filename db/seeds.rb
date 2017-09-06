@@ -33,7 +33,7 @@ character_import("george_bush", "George Bush", "43rd U.S. President, meme-friend
 character_import("george_carlin", "George Carlin", "Stand-up Comedian, renowned cynic. Made the bald ponytail fashionable again.", "george_carlin.jpg", "george_carlin_selected.jpg")
 
 # God
-character_import("god", "God", "Allegedly created the universe in 6 days. Known to get into fits of jealous rage.", "god.jpg", "god_selected.jpg")
+character_import("god", "God (Yahweh)", "Allegedly created the universe in 6 days. Known to get into fits of jealous rage.", "god.jpg", "god_selected.jpg")
 
 # Henry Kissinger
 character_import("henry_kissinger", "Henry Kissinger", "56th Secretary of State, Committed Genocide with a Swagger", "henry_kissinger.jpg", "henry_kissinger_selected.jpg",)
