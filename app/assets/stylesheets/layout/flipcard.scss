@@ -10,6 +10,7 @@
 
   .flipcard-front,
   .flipcard-back {
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     transition: transform 0.3s;
