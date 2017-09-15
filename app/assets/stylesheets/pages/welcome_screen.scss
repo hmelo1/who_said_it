@@ -1,3 +1,6 @@
 #welcome-screen {
   padding-top: 300px;
+  @media (max-width: 550px) {
+    padding-top: 200px;
+  }
 }
