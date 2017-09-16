@@ -10,6 +10,9 @@
   @media (max-width: 550px) {
     margin: 0 1% 8vh 1%;
   }
+  @media (max-height: 550px) {
+    margin-bottom: 15%;
+  }
   .flipcard-front,
   .flipcard-back {
     -webkit-backface-visibility: hidden;
