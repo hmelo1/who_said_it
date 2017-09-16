@@ -1,16 +1,21 @@
 #game-screen {
   margin-top: 2%;
+  @media (max-width: 550px) {
+    margin-top: 4%;
+  }  
   #game-quotes {
     width: 90%;
     margin: 0 auto;
+    @media (max-width: 550px) {
+      width: 95%;
+    }
     p {
       font-size: 3.6rem;
-      // Smaller than Desktop
       @media (max-width: 750px) {
         font-size: 2.4rem;
       }
       @media (max-width: 550px) {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
     }
   }

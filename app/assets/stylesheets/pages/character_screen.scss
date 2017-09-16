@@ -4,16 +4,16 @@
   h1 {
     font-family: $tertiary-font-family;
     font-weight: normal;
-    margin: 2% 0 -4% 0;
+    margin: 2% 0;
 	}
 
   button {
     display: block;
-    margin: 5% auto;
-    width: 100%;
-
-    @media (min-width: 550px) {
-      padding: 50px 0;
+    margin: 1% auto;
+    width: 99.5%;
+    padding: 50px 0;
+    @media (max-width: 550px) {
+      padding: 20px 0;
     }
 	}
 }
