@@ -4,3 +4,10 @@
   content: "";
   display: table;
   clear: both; }
+
+.row {
+  margin-left: -.5%;
+  @media (max-width: 550px) {
+    margin-left: -1%;
+  }
+}

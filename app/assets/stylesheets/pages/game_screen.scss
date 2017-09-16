@@ -3,11 +3,15 @@
   #game-quotes {
     width: 90%;
     margin: 0 auto;
-    h6 {
-      font-size: 2.4rem;
-    }
     p {
       font-size: 3.6rem;
+      // Smaller than Desktop
+      @media (max-width: 750px) {
+        font-size: 2.4rem;
+      }
+      @media (max-width: 550px) {
+        font-size: 1.8rem;
+      }
     }
   }
 }
