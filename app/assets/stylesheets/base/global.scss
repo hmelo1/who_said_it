@@ -1,9 +1,6 @@
 html {
   font-size: $base-font-size;
-  min-height: 100%;
-}
-
-body {
+  height: 100%;
   background: $background-gradient;
   background-attachment: fixed;
   color: $primary-font-color;
