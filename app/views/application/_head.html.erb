@@ -1,9 +1,36 @@
 <head>
   <title>Who Said It?</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Search Engine -->
+  <meta name="description" content="The Game of Deciding Who Said What! Choose two characters from a pool of twelve characters for up to 66 different possible combinations." />
+
+  <!-- Schema.org (Google) -->
+  <meta itemprop="name" content="Who Said It?" />
+  <meta itemprop="description" content="The Game of Deciding Who Said What! Choose two characters from a pool of twelve characters for up to 66 different possible combinations." />
+
+  <!-- Open Graph (Facebook, Pinterest & Google+) -->
+  <meta name="og:title" content="Who Said It?" />
+  <meta name="og:description" content="The Game of Deciding Who Said What! Choose two characters from a pool of twelve characters for up to 66 different possible combinations." />
+  <meta name="og:url" content="http://whosaidit.co" />
+  <meta name="og:site_name" content="Who Said It?" />
+  <meta name="og:locale" content="en_US" />
+  <meta name="og:type" content="website" />
+
   <%= csrf_meta_tags %>
   <%= favicon_link_tag 'favicon.ico' %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Raleway|Merriweather', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97675920-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97675920-2');
+  </script>
+
 </head>
