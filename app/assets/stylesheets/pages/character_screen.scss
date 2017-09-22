@@ -1,13 +1,28 @@
 // Character Select Page
 
 #character-screen {
+  #difficulty-level {
+    margin-bottom: 1%;
+    button {
+      width: 30%;
+      margin: 1%;
+      border: 5px solid rgba(255,255,255,.0);
+      transition: all .2s ease-in-out;
+      transform: scale(1);
+    }
+    button.active {
+      transform: scale(1.1);
+      border: 5px solid rgba(255,255,255,.9);
+    }
+  }
+
   h1 {
     font-family: $tertiary-font-family;
     font-weight: normal;
-    margin: 2% 0;
+    margin: 2% 0 1% 0;
 	}
 
-  button {
+  #create-game button {
     display: block;
     margin: 1% auto;
     width: 99.5%;
