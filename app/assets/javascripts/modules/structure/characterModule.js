@@ -21,7 +21,9 @@
 	    })
 	  },
 	  selectFlipCards: function(event) {
-	  	if ($('.selected').length < 2) {
+	  	var max = $('#difficulty-level button.active').data('max-characters');
+
+	  	if ($('.selected').length < max) {
 				$(this).toggleClass('selected');
 			} else {
 				$(this).removeClass('selected');
