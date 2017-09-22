@@ -125,6 +125,11 @@
         success: function() {
           postGameModule.passCompletedGame(originalThis.game);
           originalThis.unbindEvents();
+        },
+        // Game will show postgame if user goes offline during game
+        error: function() {
+          postGameModule.passCompletedGame(originalThis.game);
+          originalThis.unbindEvents();
         }
       });
     },
