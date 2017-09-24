@@ -90,18 +90,17 @@
       this.$gameQuotes.html(quote);
     },
     renderCharacters: function(gameCharacters) {
-      // Get the URL of fingerprinted asset on users computer (Regex removes Base URL)
-      var image1path = $(`img[alt='${this.game.characters[0].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
-      var image2path = $(`img[alt='${this.game.characters[1].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
-
       // Render Handlebars Characters Template
       var pictureTemplate = Handlebars.compile($('#game-picture-template').html());
       var characters = pictureTemplate(gameCharacters);
       this.$gamePictures.html(characters);
 
-      // Insert Images Into Character Template
-      $('#selected-character-0').attr('src', image1path);
-      $('#selected-character-1').attr('src', image2path);
+      for (i = 0; i < this.game.characters.length; i++) {
+        // Get the URL of fingerprinted asset on users computer (Regex removes Base URL)
+        var imagePath = $(`img[alt='${this.game.characters[i].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
+          // Insert Images Into Character Template
+        $(`#selected-character-${i}`).attr('src',imagePath);
+      }
     },
     saveCompletedGame: function() {
       // Mark non-database game as complete
