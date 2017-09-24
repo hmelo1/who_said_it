@@ -10,7 +10,8 @@
 		cacheDom: function() {
 			// Character Screen
 	    this.$characterScreen = $('#character-screen');
-			this.$difficultyButtons = $('#difficulty-level button');
+			this.$difficultyDiv = $('#difficulty');
+			this.$difficultyButtons = this.$difficultyDiv.find('button')
 	    this.$flipcards = this.$characterScreen.find('.flipcard');
 			this.$characterForm = this.$characterScreen.find('form');
 		},
@@ -31,7 +32,7 @@
 			}
 		},
 	  selectFlipCards: function() {
-	  	var max = $('#difficulty-level button.active').data('max-characters');
+	  	var max = $('#difficulty button.active').data('max-characters');
 
 	  	if ($('.selected').length < max) {
 				$(this).toggleClass('selected');
@@ -41,38 +42,28 @@
 	  },
 	  postNewGame: function(event) {
 	  	event.preventDefault();
-
 	  	var originalThis = this;
 
-			var requiredCharacters = $('#difficulty-level button.active').data('max-characters');
-			var selectedCharacters = $('.selected').length;
+			var difficultyLevel = this.$difficultyDiv.find('button.active').attr('id');
+			var requiredCharNum = this.$difficultyDiv.find('button.active').data('max-characters');
+			var selectedCharNum = $('.selected').length;
 
-	    if (selectedCharacters < requiredCharacters) {
-	      alert(`Please select ${requiredCharacters} characters`);
+	    if (selectedCharNum < requiredCharNum) {
+	      alert(`Please select ${requiredCharNum} characters`);
 				return;
 	    } else {
 	      var AUTH_TOKEN = $("input[name='authenticity_token']").val();
 	      var url = event.target.action
 
-	      var character1 = $('.selected :input')[0];
-	      var character2 = $('.selected :input')[1];
-				var characterArray = [character1, character2]
-
-				if ($('.selected :input')[2]) {
-					var character3 = $('.selected :input')[2];
-					characterArray.push(character3);
-				}
-				if ($('.selected :input')[3]) {
-					var character4 = $('.selected :input')[3];
-					characterArray.push(character4);
-				}
 
 	      var object = {
 	        'authenticity_token': AUTH_TOKEN,
+					'difficulty': difficultyLevel,
 	        'characters' : []
 	      }
 
-				for (i = 0; i < requiredCharacters; i++) {
+				var characterArray = $('.selected :input');
+				for (i = 0; i < requiredCharNum; i++) {
 					object.characters.push({'name': characterArray[i].name, 'id': characterArray[i].id})
 				}
 

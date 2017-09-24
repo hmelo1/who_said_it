@@ -3,6 +3,7 @@ class Game {
 	constructor(attributes) {
 	  this.id = attributes.id;
 	  this.characters = attributes.characters;
+		this.difficulty = attributes.difficulty;
 	  this.quotes = attributes.game_quotes;
 	  this.state = attributes.state;
 	  this.completed = attributes.completed;
@@ -14,7 +15,7 @@ class Game {
 			for (var i = 0; i < this.state.length; i++) {
 				if (this.state[i] == true) {
 					score++;
-				} 
+				}
 			}
 			return score;
 		} else {

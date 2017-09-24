@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 	def create
-		@game = Game.create
+		@game = Game.create(difficulty_params)
 		character_params.each do |character|
 			@game.characters << Character.find_by(character_params[character])
 		end
@@ -8,8 +8,8 @@ class GamesController < ApplicationController
 	end
 
 	def save
-		@game = Game.find(game_params[:id])
-		@game.update(state: game_params[:state], completed: true)
+		@game = Game.find(postgame_params[:id])
+		@game.update(state: postgame_params[:state], completed: true)
 	end
 
 	def index
@@ -28,7 +28,11 @@ class GamesController < ApplicationController
 		params.require(:characters).permit!
 	end
 
-	def game_params
+	def difficulty_params
+		params.permit(:difficulty)
+	end
+
+	def postgame_params
 		params.permit(:id, :state => [])
 	end
 
