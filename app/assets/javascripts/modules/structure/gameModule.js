@@ -103,7 +103,7 @@
       }
     },
     saveCompletedGame: function() {
-      // Mark non-database game as complete
+      // Mark front-end game as complete
       this.game.completed = true;
 
       // Declare and Assign Module for AJAX
