@@ -14,6 +14,10 @@
 			this.$difficultyButtons = this.$difficultyDiv.find('button')
 	    this.$flipcards = this.$characterScreen.find('.flipcard');
 			this.$characterForm = this.$characterScreen.find('form');
+			// Modal
+      this.$alertModal = $('.alertmodal');
+			this.$alertModalError = this.$alertModal.find('#error');
+			this.$alertModalDifficulty = this.$alertModal.find('#mode');
 		},
 	  bindEvents: function() {
 	  	var originalThis = this;
@@ -40,6 +44,14 @@
 				$(this).removeClass('selected');
 			}
 	  },
+		alertModalFn: function(message) {
+			var originalThis = this;
+			this.$alertModalError.text(message);
+			this.$alertModal.css('display', 'block');
+			setTimeout(function() {
+				originalThis.$alertModal.fadeOut();
+			}, 2000);
+		},
 	  postNewGame: function(event) {
 	  	event.preventDefault();
 	  	var originalThis = this;
@@ -49,7 +61,7 @@
 			var selectedCharNum = $('.selected').length;
 
 	    if (selectedCharNum < requiredCharNum) {
-	      alert(`Please select ${requiredCharNum} characters`);
+				this.alertModalFn(`Please select ${requiredCharNum} characters`);
 				return;
 	    } else {
 	      var AUTH_TOKEN = $("input[name='authenticity_token']").val();

@@ -1,4 +1,4 @@
-.gamemodal {
+.modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
@@ -16,7 +16,7 @@
 }
 
 /* Modal Content */
-.gamemodal-content {
+.modal-content {
   color: $primary-white;
   position: relative;
   background-color: $secondary-color;
@@ -29,6 +29,14 @@
   animation-duration: 0.4s;
   @media (max-width: 1200px) {
     width: 95%;
+  }
+}
+
+/* Alert Modal */
+.alertmodal .modal-content {
+  padding: 50px;
+  @media (max-width: 1200px) {
+    padding: 30px 0;
   }
 }
 
