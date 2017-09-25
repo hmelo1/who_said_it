@@ -1,12 +1,14 @@
 <script id="game-picture-template" type="text/x-handlebars-template">
-  {{#each this}}
-		<div class="gamecard" data-id="{{id}}" data-name="{{name}}">
-		  <img id="selected-character-{{@index}}">
-		  <div class="gamecard-container center">
-		    <h5>{{name}}</h5>
-		  </div>
-		</div>
-	{{/each}}
+  <div id="gamecard-container">
+    {{#each this}}
+  		<div class="gamecard" data-id="{{id}}" data-name="{{name}}">
+  		  <img id="selected-character-{{@index}}">
+  		  <div class="gamecard-container center">
+  		    <h5>{{name}}</h5>
+  		  </div>
+  		</div>
+  	{{/each}}
+  </div>
 </script>
 
 <script id="game-quote-template" type="text/x-handlebars-template">

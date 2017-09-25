@@ -1,24 +1,37 @@
-.gamecard {
-	cursor: pointer;
+#gamecard-container {
+	display: table;
+	table-layout: fixed;
 	margin: 0 auto;
-	margin-bottom: 40px;
-	max-width: 400px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
-  border-radius: 10px;
+	border-spacing: 20px;
+	padding-bottom: 20px;
 	@media (max-width: 550px) {
-		border-radius: 5px;
+		border-spacing: 5px;
 	}
- 	img {
- 		border-radius: 10px 10px 0 0;
-    max-width: 400px;
-    width: 100%;
+
+
+	.gamecard {
+		display: table-cell;
+		cursor: pointer;
+		max-width: 400px;
+	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
+	  border-radius: 10px;
 		@media (max-width: 550px) {
-			border-radius: 5px 5px 0 0;
+			border-radius: 5px;
 		}
-  }
-  .gamecard-container {
-    padding: 10px 0;
-    margin-top: -3px;
-		word-spacing: 100vw;
-  }
+
+		img {
+	 		border-radius: 10px 10px 0 0;
+	    max-width: 400px;
+	    width: 100%;
+			@media (max-width: 550px) {
+				border-radius: 5px 5px 0 0;
+			}
+	  }
+
+	  .gamecard-container {
+	    padding: 10px 0;
+	    margin-top: -3px;
+			word-spacing: 100vw;
+	  }
+	}
 }
