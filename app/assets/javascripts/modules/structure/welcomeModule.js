@@ -21,7 +21,7 @@
 	  	this.$playButton.unbind();
 	  },
 	  onLoad: function() {
-	  	// this.$characterScreen.hide().removeClass('hide');
+	  	this.$characterScreen.hide().removeClass('hide');
 	  },
 	  swapWelcome: function() {
 			// Hide Welcome Screen and Show Character Screen
