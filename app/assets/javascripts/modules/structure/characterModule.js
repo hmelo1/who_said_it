@@ -14,6 +14,8 @@
 			this.$difficultyButtons = this.$difficultyDiv.find('button')
 	    this.$flipcards = this.$characterScreen.find('.flipcard');
 			this.$characterForm = this.$characterScreen.find('form');
+			// Game Screen
+			this.$gameScreen = $('#game-screen');
 			// Modal
       this.$alertModal = $('.alertmodal');
 			this.$alertModalError = this.$alertModal.find('#error');
@@ -86,6 +88,7 @@
 	        success: function(data) {
 	        	// Character Screen Fade Out
 	        	originalThis.$characterScreen.hide();
+
 						// Pass Game to Game Module
 	          gameModule.createGame(data);
 	        }
