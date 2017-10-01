@@ -51,7 +51,8 @@
     restartGame: function () {
       // Removed Selected Cards
       $('.selected').removeClass('selected');
-      // Hide Post Game Screen
+      // Hide Game Screen and Post Game Screen
+      this.$gameScreen.addClass('hide');
       this.$postGameScreen.addClass('hide').fadeOut();
       this.$animateSpan.removeClass('progress');
       // Empty Game Pictures

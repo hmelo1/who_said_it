@@ -88,7 +88,8 @@
 	        success: function(data) {
 	        	// Character Screen Fade Out
 	        	originalThis.$characterScreen.hide();
-
+						// Show Game Screen
+						originalThis.$gameScreen.removeClass('hide');
 						// Pass Game to Game Module
 	          gameModule.createGame(data);
 	        }
