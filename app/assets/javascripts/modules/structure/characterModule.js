@@ -60,9 +60,9 @@
 
 			var difficultyLevel = this.$difficultyDiv.find('button.active').attr('id');
 			var maxCharacters = this.$difficultyDiv.find('button.active').data('max-characters');
-			var selectedCharNum = $('.selected').length;
+			var selectedCharacters = $('.selected').length;
 
-	    if (selectedCharNum < requiredCharNum) {
+	    if (selectedCharacters < requiredCharNum) {
 				this.characterModalFn(`Please select ${requiredCharNum} characters`);
 				return;
 	    } else {
