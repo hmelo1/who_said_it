@@ -11,7 +11,7 @@
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   @media (max-width: 750px) {
-    padding-top: 5%;
+    padding-top: 2%;
   }
 }
 
@@ -23,7 +23,6 @@
   margin: auto;
   border-radius: 10px;
   width: 40%;
-  padding: 30px 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
   animation-duration: 0.4s;
@@ -32,9 +31,21 @@
   }
 }
 
-/* Alert Modal */
-.alertmodal .modal-content {
+/* Character Modal */
+.gamemodal .modal-content {
   padding: 50px;
+  @media (max-width: 1200px) {
+    padding: 30px 0;
+  }
+
+  #evaluate {
+    margin: 10px;
+  }
+}
+
+/* Character Modal */
+.charactermodal .modal-content {
+  padding: 100px;
   @media (max-width: 1200px) {
     padding: 30px 0;
   }

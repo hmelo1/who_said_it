@@ -17,9 +17,8 @@
 			// Game Screen
 			this.$gameScreen = $('#game-screen');
 			// Modal
-      this.$alertModal = $('.alertmodal');
-			this.$alertModalError = this.$alertModal.find('#error');
-			this.$alertModalDifficulty = this.$alertModal.find('#mode');
+      this.$characterModal = $('.charactermodal');
+			this.$characterModalMessage = this.$characterModal.find('#message');
 		},
 	  bindEvents: function() {
 	  	var originalThis = this;
@@ -30,11 +29,12 @@
 	    })
 	  },
 		activateDifficulty: function(event) {
-			var originalThis = this;
-			if (!$(event.target).hasClass('active')) {
-				originalThis.$difficultyButtons.removeClass('active');
-				originalThis.$flipcards.removeClass('selected');
-				$(event.target).addClass('active');
+			var clickedButton = $(event.target)
+			
+			if (!clickedButton.hasClass('active')) {
+				this.$difficultyButtons.removeClass('active');
+				this.$flipcards.removeClass('selected');
+				clickedButton.addClass('active');
 			}
 		},
 	  selectFlipCards: function() {
@@ -46,12 +46,12 @@
 				$(this).removeClass('selected');
 			}
 	  },
-		alertModalFn: function(message) {
+		characterModalFn: function(message) {
 			var originalThis = this;
-			this.$alertModalError.text(message);
-			this.$alertModal.css('display', 'block');
+			this.$characterModalMessage.text(message);
+			this.$characterModal.css('display', 'block');
 			setTimeout(function() {
-				originalThis.$alertModal.fadeOut();
+				originalThis.$characterModal.fadeOut();
 			}, 2000);
 		},
 	  postNewGame: function(event) {
@@ -63,7 +63,7 @@
 			var selectedCharNum = $('.selected').length;
 
 	    if (selectedCharNum < requiredCharNum) {
-				this.alertModalFn(`Please select ${requiredCharNum} characters`);
+				this.characterModalFn(`Please select ${requiredCharNum} characters`);
 				return;
 	    } else {
 	      var AUTH_TOKEN = $("input[name='authenticity_token']").val();
