@@ -62,8 +62,8 @@
 			var maxCharacters = this.$difficultyDiv.find('button.active').data('max-characters');
 			var selectedCharacters = $('.selected').length;
 
-	    if (selectedCharacters < requiredCharNum) {
-				this.characterModalFn(`Please select ${requiredCharNum} characters`);
+	    if (selectedCharacters < maxCharacters) {
+				this.characterModalFn(`Please select ${maxCharacters} characters`);
 				return;
 	    } else {
 	      var AUTH_TOKEN = $("input[name='authenticity_token']").val();
@@ -77,7 +77,7 @@
 	      }
 
 				var characterArray = $('.selected :input');
-				for (i = 0; i < requiredCharNum; i++) {
+				for (i = 0; i < maxCharacters; i++) {
 					object.characters.push({'name': characterArray[i].name, 'id': characterArray[i].id})
 				}
 
