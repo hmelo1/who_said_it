@@ -30,7 +30,7 @@
 	  },
 		activateDifficulty: function(event) {
 			var clickedButton = $(event.target)
-			
+
 			if (!clickedButton.hasClass('active')) {
 				this.$difficultyButtons.removeClass('active');
 				this.$flipcards.removeClass('selected');
@@ -38,9 +38,9 @@
 			}
 		},
 	  selectFlipCards: function() {
-	  	var max = $('#difficulty button.active').data('max-characters');
+	  	var maxCharacters = $('#difficulty button.active').data('max-characters');
 
-	  	if ($('.selected').length < max) {
+	  	if ($('.selected').length < maxCharacters) {
 				$(this).toggleClass('selected');
 			} else {
 				$(this).removeClass('selected');
@@ -59,7 +59,7 @@
 	  	var originalThis = this;
 
 			var difficultyLevel = this.$difficultyDiv.find('button.active').attr('id');
-			var requiredCharNum = this.$difficultyDiv.find('button.active').data('max-characters');
+			var maxCharacters = this.$difficultyDiv.find('button.active').data('max-characters');
 			var selectedCharNum = $('.selected').length;
 
 	    if (selectedCharNum < requiredCharNum) {
