@@ -1,6 +1,10 @@
 img.logo {
   display: block;
   margin: 20px auto 10px;
+  @media (max-width: 1000px) {
+    margin: 10px auto 5px;
+    width: 75%;
+  }
   @media (max-width: 550px) {
     margin: 10px auto 5px;
     width: 50%;

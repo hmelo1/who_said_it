@@ -1,0 +1,10 @@
+#loader {
+	padding-top: 400px;
+	@media (max-width: 550px) {
+		padding-top: 200px;
+	}
+	svg {
+		display: block;
+		margin: 0 auto;
+	}
+}

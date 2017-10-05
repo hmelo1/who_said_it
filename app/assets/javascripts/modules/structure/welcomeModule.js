@@ -3,7 +3,6 @@
 	var welcomeModule = {
 		init: function() {
 			this.cacheDom();
-			this.onLoad();
 	    this.bindEvents();
 		},
 		cacheDom: function() {
@@ -20,13 +19,10 @@
 	  unbindEvents: function() {
 	  	this.$playButton.unbind();
 	  },
-	  onLoad: function() {
-	  	this.$characterScreen.hide().removeClass('hide');
-	  },
 	  swapWelcome: function() {
 			// Hide Welcome Screen and Show Character Screen
-	    this.$welcomeScreen.hide();
-	    this.$characterScreen.fadeIn();
+	    this.$welcomeScreen.addClass('hide');
+	    this.$characterScreen.removeClass('hide');
 	    // Unbind all events to avoid memory leaks
 	    this.unbindEvents();
 	  }

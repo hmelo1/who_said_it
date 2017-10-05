@@ -4,6 +4,10 @@
 	margin: 0 auto;
 	border-spacing: 20px;
 	padding-bottom: 20px;
+	width: 80%;
+	@media (max-width: 1000px) {
+		width: 100%;
+	}
 	@media (max-width: 550px) {
 		border-spacing: 5px;
 	}
@@ -12,7 +16,6 @@
 	.gamecard {
 		display: table-cell;
 		cursor: pointer;
-		max-width: 250px;
 	  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.3);
 	  border-radius: 10px;
 		@media (max-width: 550px) {
@@ -21,14 +24,14 @@
 
 		img {
 	 		border-radius: 10px 10px 0 0;
-	    max-width: 400px;
 	    width: 100%;
 			@media (max-width: 550px) {
 				border-radius: 5px 5px 0 0;
 			}
 	  }
 
-	  .gamecard-container {
+	  .text-container {
+	  	width: 100%;
 	    padding: 10px 0;
 	    margin-top: -3px;
 			word-spacing: 100vw;

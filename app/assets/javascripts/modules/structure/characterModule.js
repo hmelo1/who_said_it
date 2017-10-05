@@ -19,6 +19,8 @@
 			// Modal
       this.$characterModal = $('.charactermodal');
 			this.$characterModalMessage = this.$characterModal.find('#message');
+			// Loader
+			this.$loader = $('#loader')
 		},
 	  bindEvents: function() {
 	  	var originalThis = this;
@@ -85,9 +87,13 @@
 	        type: "POST",
 	        url: url,
 	        data: object,
-	        success: function(data) {
-	        	// Character Screen Fade Out
+	        beforeSend: function(){
+				  	// Character Screen Fade Out
 	        	originalThis.$characterScreen.hide();
+	        	originalThis.$loader.removeClass('hide');
+				  },
+	        success: function(data) {
+	        	originalThis.$loader.addClass('hide');
 						// Show Game Screen
 						originalThis.$gameScreen.removeClass('hide');
 						// Pass Game to Game Module
