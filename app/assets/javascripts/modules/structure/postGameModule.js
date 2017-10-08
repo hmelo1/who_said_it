@@ -53,7 +53,7 @@
       $('.selected').removeClass('selected');
       // Hide Game Screen and Post Game Screen
       this.$gameScreen.addClass('hide');
-      this.$postGameScreen.addClass('hide').fadeOut();
+      this.$postGameScreen.addClass('hide');
       this.$animateSpan.removeClass('progress');
       // Empty Game Pictures
       this.gamePictures.empty();

@@ -10,8 +10,8 @@
   @media (max-width: 550px) {
     margin: 0 1% 8vh 1%;
   }
-  @media (max-height: 550px) {
-    margin-bottom: 15%;
+  @media (max-height: 600px) {
+    margin-bottom: 12vh;
   }
   .flipcard-front,
   .flipcard-back {
@@ -36,7 +36,7 @@
       border: 3px solid rgba(228,167,190,0.2);
       border-radius: 0 0 10px 10px;
       border-top: 0;
-      box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+      box-shadow: 0 6px 8px 0 rgba(0,0,0,0.1);
       margin-top: -4px;
       padding: 10px 0 20px 0;
       width: 100%;
