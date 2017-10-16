@@ -35,6 +35,7 @@
     createGame: function(data) {
       this.game = new Game(data);
       this.playGame();
+      this.resizeCardContainer();
     },
     playGame: function() {
       // Game Functions
@@ -100,6 +101,13 @@
         var imagePath = $(`img[alt='${this.game.characters[i].name}']`).prop('src').replace(/^(?:\/\/|[^\/]+)*\//, "");
           // Insert Images Into Character Template
         $(`#selected-character-${i}`).attr('src',imagePath);
+      }
+    },
+    resizeCardContainer: function() {
+      if (this.game.characters.length == 2 && $(window).width() > 1000) {
+        this.$gameScreen.find('#gamecard-container').width('50%');
+      } else if (this.game.characters.length == 3 && $(window).width() > 1000) {
+        this.$gameScreen.find('#gamecard-container').width('70%');
       }
     },
     saveCompletedGame: function() {
