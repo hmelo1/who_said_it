@@ -1,5 +1,6 @@
-<div id="welcome-screen" class="center">
-  <%= svg 'logos/who_said_it_title' %>
-	<h5 id="subtitle">The Game of Deciding Who Said What</h5>
-	<button id="play">Play Game</button>
+<div id="welcome-screen">
+    <%= svg 'logos/who_said_it_title' %>
+  	<h5 id="subtitle">The Game of Deciding Who Said What</h5>
+  	<button id="play">Play Game</button>
+    <p id="games-played"><%= Game.all.count =%> Games Played!</p>
 </div>

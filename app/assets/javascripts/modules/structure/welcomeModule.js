@@ -21,7 +21,7 @@
 	  },
 	  swapWelcome: function() {
 			// Hide Welcome Screen and Show Character Screen
-	    this.$welcomeScreen.addClass('hide');
+	    this.$welcomeScreen.css('display', 'none');
 	    this.$characterScreen.removeClass('hide');
 	    // Unbind all events to avoid memory leaks
 	    this.unbindEvents();
