@@ -1,3 +1,5 @@
+# [Who Said It? <-- Link](https://whosaidit.co)
+
 Who Said It is a quote-picking game built in Ruby and Javascript. After selecting two characters, 10 quotes will be generated from all available quotes of the selected characters. A single quote will be displayed at a time and the user has to guess 'Who Said It'. Game score is provided upon completing the game.
 
 **Getting Started**
@@ -27,3 +29,4 @@ Type `rails s` in Terminal to run Rails server and visit locahost:3000 in browse
 **Contributing**
 
 Contributions to the game are welcome!
+ 
